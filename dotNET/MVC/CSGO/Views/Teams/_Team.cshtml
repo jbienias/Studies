@@ -1,0 +1,28 @@
+﻿@model CSGO.Models.Team
+
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.DateOfFounding)
+
+    </td>
+    <td>
+        @Html.DisplayFor(modeltem => Model.Players.Count)
+    </td>
+    <td>
+        @if (User.IsInRole("Administrator") || User.IsInRole("User"))
+        {
+            <a asp-action="Index" asp-route-id="@Model.TeamId" id="select_team" class="btn btn-sm btn-default">Select</a>
+            <a asp-action="Details" asp-route-id="@Model.TeamId" id="details_team" class="btn btn-sm btn-info">Details</a>
+        }
+        @if (User.IsInRole("Administrator"))
+        {
+
+            <a asp-action="Edit" asp-route-id="@Model.TeamId" id="edit_team" class="btn btn-sm btn-warning">Edit</a>
+            <a asp-action="Delete" asp-route-id="@Model.TeamId" id="delete_team" class="btn btn-sm btn-danger">Delete</a>
+        }
+
+    </td>
+</tr>

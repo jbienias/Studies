@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS:GO CRUD</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'cs.ico' %>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">CS:GO</a>
+        </div>
+        <div class="navbar-collapse">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><%= link_to "Players", players_path, :class => "nav-link" %></li>
+          </ul>
+        </div>
+    </div>
+  </nav>
+    <%= yield %>
+  </body>
+  <footer>
+    <hr />
+    <p style="text-align: center;">&copy; 2018. <a href="http://blog.counter-strike.net/" title="CS:GO">CS:GO</a> CRUD by <a href="https://github.com/jbienias" title="GitHub">Jan Bienias</a></p>
+  </footer>
+</html>

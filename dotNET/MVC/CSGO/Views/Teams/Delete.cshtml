@@ -1,0 +1,32 @@
+﻿@model CSGO.Models.Team
+
+@{
+    ViewData["Title"] = "Delete Team";
+}
+
+<h3>Team Deletion</h3>
+
+<h4>Are you 100% sure you want to delete this team?</h4>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfFounding)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfFounding)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TeamId" />
+        <input id="delete_team" type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-action="Index" id="cancel_delete_team" class="btn btn-default">Cancel</a>
+    </form>
+</div>

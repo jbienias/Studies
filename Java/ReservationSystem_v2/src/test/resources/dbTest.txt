@@ -1,0 +1,14 @@
+"DONT CHANGE THIS FILE"
+NAZWA, DNI OTWARTE, GODZINY OTWARCIA, GODZINY BEZ REZERWACJI, OPIS
+TelePizza;1 2 3 4 5 6 7;8-20;16-17;Super pizzeria tylko na Osowej!
+jakis idiota proboje zepsuc mi baze danych
+dlaczego :(
+Wszamalbym Niezly Obiad;1 2 3 4 5 6;7-24;7-12;Dowozy za darmoche!
+eqwee12211eo2kp kodkpoakdpoakdpakdpoakpadpda
+BobBudowniczy;1 7;7-16;4-16;Co dajesz godzine wolna od rezerwacji wczesniej niz otwarcie he?
+BobBudowniczy;1 7;7-16;7-20;A teraz pozniej? o ty chamie!
+BobBudowniczy;1 7;7-7;7-7;Tez zle, co robisz???
+BobBudowniczy;1 2 3 4 7;7-16;7-16;Dobra, niech bedzie
+Calodobowy;1 2 3 4 5 6 7;0-24;0-24;Niby calodobowy a nigdy nie mozna zabookowac :(
+CalodobowyBezGodzinki;1 2 3 4 5 6 7;0-24;6-7;Taki ktory ma przerwe godzinke ;)
+Disclaimer: Test should give 6 errors when loading this database and service should have 5 records loaded

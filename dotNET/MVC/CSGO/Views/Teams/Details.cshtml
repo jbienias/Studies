@@ -1,0 +1,32 @@
+﻿@model CSGO.Models.Team
+
+@{
+    ViewData["Title"] = "Team Details";
+}
+
+<h3>Team Details</h3>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.DateOfFounding)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.DateOfFounding)
+        </dd>
+    </dl>
+</div>
+<div>
+    @if (User.IsInRole("Administrator"))
+    {
+        <a asp-action="Edit" asp-route-id="@Model.TeamId" class="btn btn-warning">Edit</a>
+    }
+    <a asp-action="Index" class="btn btn-default">Back</a>
+</div>

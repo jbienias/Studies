@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CSGO.Views.TeamsPage"
+             xmlns:viewModels="clr-namespace:CSGO.ViewModels"
+             xmlns:behaviors="clr-namespace:CSGO.Validators.Behaviors"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" Padding="20" BackgroundColor="DarkSlateGray">
+                <StackLayout Orientation="Horizontal"  HorizontalOptions="FillAndExpand">
+                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                        <Button Text="TEAMS"
+                                TextColor="CadetBlue"
+                                HorizontalOptions="StartAndExpand"
+                                BorderColor="Transparent"
+                                BackgroundColor="Transparent"
+                                FontSize="Large"
+                                Command="{Binding RefreshTeams}" />
+                    </StackLayout>
+                    <StackLayout Orientation="Vertical"  HorizontalOptions="FillAndExpand">
+                        <Button Text="+"
+                                FontSize="Large"
+                                TextColor="CadetBlue"
+                                HorizontalOptions="EndAndExpand"
+                                BorderColor="Transparent"
+                                BackgroundColor="Transparent"
+                                Command="{Binding VisibilitySwitchCommand}" />
+                    </StackLayout>
+                </StackLayout>
+
+                <BoxView HeightRequest="1" BackgroundColor="CadetBlue"/>
+
+                <StackLayout Spacing="10" Padding="20" BackgroundColor="CadetBlue" IsVisible="{Binding IsVisible}">
+                    <Label Text="Team name:"
+                           TextColor="#1F3737"/>
+                    <Entry Text="{Binding Name}"
+                           Placeholder="e.g Virtus.pro" TextColor="Black">
+                        <Entry.Behaviors>
+                            <behaviors:TeamNameValidationBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Label Text="Team logo URL (optional):"
+                           TextColor="#1F3737"/>
+                    <Entry Text="{Binding LogoUrl}"
+                           Placeholder="e.g https://i.imgur.com/XYZ.jpg" TextColor="Black"/>
+
+                    <Button Text="ADD TEAM"
+                            TextColor="#71bdbf" BackgroundColor="DarkSlateGray" BorderColor="DarkSlateGray"
+                            Command="{Binding AddTeam}"/>
+
+                    <Button Text="CANCEL" 
+                            TextColor="#71bdbf" BackgroundColor="DarkSlateGray" BorderColor="DarkSlateGray"
+                            Command="{Binding VisibilitySwitchCommand}" />
+                </StackLayout>
+
+                <StackLayout Spacing="10" BackgroundColor="DarkSlateGray" Padding="5, 10, 5, 0" VerticalOptions="FillAndExpand" >
+                    <ListView ItemsSource="{Binding Teams, Mode=TwoWay}"
+                              SelectedItem="{Binding SelectedTeam, Mode=TwoWay}"
+                              SeparatorColor="CadetBlue"
+                              HasUnevenRows="True">
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+                                <ViewCell>
+                                    <StackLayout VerticalOptions="FillAndExpand" Orientation="Horizontal" Padding="10">
+                                    <Frame CornerRadius="10" Margin="0" Padding="0" IsClippedToBounds="True">
+                                        <Image HeightRequest="80" WidthRequest="80" 
+												       Aspect="AspectFill"
+												       Source="{Binding LogoUrl, Mode=TwoWay}" 
+												       HorizontalOptions="Start"/>
+                                    </Frame>
+                                    <Label Text="{Binding Name, Mode=TwoWay}" TextColor="#71bdbf" Margin="0, 30, 0, 0"/>
+                                </StackLayout>
+                                </ViewCell>
+                                <!--<ViewCell >
+                                    <StackLayout>
+                                        <Grid>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="80"/>
+                                                <RowDefinition Height="5"/>
+                                            </Grid.RowDefinitions>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="80"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Image Source="{Binding LogoUrl}" Aspect="AspectFill" Grid.Column="0" Grid.Row="0"/>
+
+                                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                                <Label Text="{Binding Name, Mode=TwoWay}"  Margin="5,30,0,0" TextColor="#71bdbf"/>
+                                                --><!--<Label Text="{Binding Players.Count, Mode=TwoWay, StringFormat='Players: {0}'}"  TextColor="CadetBlue"/> --><!--
+                                            </StackLayout>
+                                            <Label Grid.Column="0" Grid.Row="1"/>
+                                        </Grid>
+                                    </StackLayout>
+                                </ViewCell>-->
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
+    
+    

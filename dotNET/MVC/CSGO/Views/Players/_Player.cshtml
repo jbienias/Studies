@@ -1,0 +1,34 @@
+﻿@model CSGO.Models.Player
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Surname)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Nickname)
+    </td>
+    <td>
+        <money>@Html.DisplayFor(modelItem => Model.Salary)</money>
+    </td>
+    <td>
+        <date>@Html.DisplayFor(modelItem => Model.DateOfBirth)</date>
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => Model.Team.Name)
+    </td>
+    <td>
+        @if (User.IsInRole("Administrator") || User.IsInRole("User"))
+        {
+            <a asp-action="Details" asp-route-id="@Model.PlayerId" id="details_player" class="btn btn-sm btn-info">Details</a>
+
+        }
+        @if (User.IsInRole("Administrator"))
+        {
+
+            <a asp-action="Edit" asp-route-id="@Model.PlayerId" id="edit_player" class="btn btn-sm btn-warning">Edit</a>
+            <a asp-action="Delete" asp-route-id="@Model.PlayerId" id="delete_player" class="btn btn-sm btn-danger">Delete</a>
+        }
+    </td>
+</tr>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="crud.CRUDController">
+   <children>
+      <TabPane layoutY="-3.0" prefHeight="500.0" prefWidth="750.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tab_zawodnik" onSelectionChanged="#selectedTab" text="Zawodnik">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="30.0" prefHeight="25.0" prefWidth="150.0" text="Zarządzanie zawodnikami" textAlignment="CENTER" />
+                        <TextField fx:id="txt_imie" layoutX="33.0" layoutY="60.0" prefHeight="25.0" prefWidth="150.0" promptText="Imię" />
+                        <TextField fx:id="txt_nazwisko" layoutX="33.0" layoutY="90.0" prefHeight="25.0" prefWidth="150.0" promptText="Nazwisko" />
+                        <TextField fx:id="txt_pseudonim" layoutX="33.0" layoutY="120.0" prefHeight="25.0" prefWidth="150.0" promptText="Pseudonim" />
+                        <TextField fx:id="txt_stawka" layoutX="33.0" layoutY="150.0" prefHeight="25.0" prefWidth="150.0" promptText="Stawka" />
+                        <ComboBox fx:id="combo_druzyna" layoutX="33.0" layoutY="180.0" prefHeight="25.0" prefWidth="150.0" promptText="Drużyna" />
+                        <ComboBox fx:id="combo_kraj" layoutX="33.0" layoutY="210.0" prefHeight="25.0" prefWidth="150.0" promptText="Kraj" />
+                        <Button fx:id="btn_dodajZawodnik" layoutX="33.0" layoutY="270.0" mnemonicParsing="false" onAction="#addZawodnik" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: rgb(127, 219, 94);" text="Dodaj" textFill="#141414" />
+                        <Button fx:id="btn_usunZawodnik" layoutX="33.0" layoutY="360.0" mnemonicParsing="false" onAction="#deleteZawodnik" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: red;" text="Usuń" textFill="#141414" />
+                        <Button layoutX="33.0" layoutY="300.0" mnemonicParsing="false" onAction="#clearZawodnik" prefHeight="25.0" prefWidth="150.0" text="Wyczyść formularz" textFill="#141414" />
+                        <Button fx:id="btn_edytujZawodnik" layoutX="33.0" layoutY="330.0" mnemonicParsing="false" onAction="#editZawodnik" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Edytuj" textFill="#141414" />
+                        <Button fx:id="btn_zaladujZawodnik" layoutX="33.0" layoutY="390.0" mnemonicParsing="false" onAction="#loadZawodnik" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4fb2ff;" text="Załaduj" textFill="#141414" />
+                        <TableView fx:id="tv_zawodnik" layoutX="220.0" layoutY="20.0" prefHeight="395.0" prefWidth="510.0">
+                          <columns>
+                            <TableColumn fx:id="tc_imie" prefWidth="75.0" text="Imię" />
+                            <TableColumn fx:id="tc_nazwisko" prefWidth="94.0" text="Nazwisko" />
+                              <TableColumn fx:id="tc_pseudonim" prefWidth="74.0" text="Pseudonim" />
+                              <TableColumn fx:id="tc_stawka" prefWidth="87.0" text="Stawka" />
+                              <TableColumn fx:id="tc_druzyna" prefWidth="81.0" text="Drużyna" />
+                              <TableColumn fx:id="tc_kraj" prefWidth="98.0" text="Kraj" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txt_id" layoutX="14.0" layoutY="9.0" prefHeight="25.0" prefWidth="17.0" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="tab_mapa" onSelectionChanged="#selectedTab" text="Mapa">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="30.0" prefHeight="25.0" prefWidth="150.0" text="Zarządzanie mapami" textAlignment="CENTER" />
+                        <TextField fx:id="txt_nazwaM" layoutX="33.0" layoutY="60.0" prefHeight="25.0" prefWidth="150.0" promptText="Nazwa" />
+                        <TextField fx:id="txt_rozmiarM" layoutX="33.0" layoutY="120.0" prefHeight="25.0" prefWidth="150.0" promptText="Rozmiar" />
+                        <TextField fx:id="txt_ocenaM" layoutX="33.0" layoutY="150.0" prefHeight="25.0" prefWidth="150.0" promptText="Ocena" />
+                        <Button fx:id="btn_dodajMapa" layoutX="33.0" layoutY="270.0" mnemonicParsing="false" onAction="#addMapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: rgb(127, 219, 94);" text="Dodaj" />
+                        <Button layoutX="33.0" layoutY="300.0" mnemonicParsing="false" onAction="#clearMapa" prefHeight="25.0" prefWidth="150.0" text="Wyczyść formularz" />
+                        <Button fx:id="btn_edytujMapa" layoutX="33.0" layoutY="330.0" mnemonicParsing="false" onAction="#editMapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Edytuj" />
+                        <Button fx:id="btn_usunMapa" layoutX="33.0" layoutY="360.0" mnemonicParsing="false" onAction="#deleteMapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: red;" text="Usuń" />
+                        <Button fx:id="btn_zaladujMapa" layoutX="33.0" layoutY="390.0" mnemonicParsing="false" onAction="#loadMapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4fb2ff;" text="Załaduj" />
+                        <TableView fx:id="tv_mapa" layoutX="220.0" layoutY="20.0" prefHeight="395.0" prefWidth="510.0">
+                          <columns>
+                            <TableColumn fx:id="tc_nazwaM" prefWidth="136.0" text="Nazwa" />
+                            <TableColumn fx:id="tc_dataM" prefWidth="137.0" text="Data stworzenia" />
+                              <TableColumn fx:id="tc_rozmiarM" minWidth="0.0" prefWidth="151.0" text="Rozmiar" />
+                              <TableColumn fx:id="tc_ocenaM" prefWidth="85.0" text="Ocena" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txt_idM" layoutX="37.0" layoutY="14.0" prefHeight="25.0" prefWidth="18.0" visible="false" />
+                        <DatePicker fx:id="dataM" editable="false" layoutX="33.0" layoutY="90.0" prefHeight="25.0" prefWidth="175.0" promptText="Data stworzenia" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab_kraj" onSelectionChanged="#selectedTab" text="Kraj">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="30.0" prefHeight="25.0" prefWidth="150.0" text="Zarządzanie krajami" textAlignment="CENTER" />
+                        <TextField fx:id="txt_nazwaK" layoutX="33.0" layoutY="60.0" prefHeight="25.0" prefWidth="150.0" promptText="Nazwa" />
+                        <TextField fx:id="txt_isoK" layoutX="33.0" layoutY="90.0" prefHeight="25.0" prefWidth="150.0" promptText="ISO" />
+                        <TextField fx:id="txt_populacjaK" layoutX="33.0" layoutY="120.0" prefHeight="25.0" prefWidth="150.0" promptText="Populacja" />
+                        <DatePicker fx:id="dataK" editable="false" layoutX="33.0" layoutY="150.0" prefHeight="25.0" prefWidth="175.0" promptText="Data założenia" />
+                        <Button fx:id="btn_dodajKraj" layoutX="33.0" layoutY="270.0" mnemonicParsing="false" onAction="#addKraj" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: rgb(127, 219, 94);" text="Dodaj" />
+                        <Button fx:id="btn_usunKraj" layoutX="33.0" layoutY="360.0" mnemonicParsing="false" onAction="#deleteKraj" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: red;" text="Usuń" />
+                        <Button layoutX="33.0" layoutY="300.0" mnemonicParsing="false" onAction="#clearKraj" prefHeight="25.0" prefWidth="150.0" text="Wyczyść formularz" />
+                        <Button fx:id="btn_edytujKraj" layoutX="33.0" layoutY="330.0" mnemonicParsing="false" onAction="#editKraj" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Edytuj" />
+                        <Button fx:id="btn_zaladujKraj" layoutX="33.0" layoutY="390.0" mnemonicParsing="false" onAction="#loadKraj" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4fb2ff;" text="Załaduj" />
+                        <TableView fx:id="tv_kraj" layoutX="220.0" layoutY="20.0" prefHeight="395.0" prefWidth="510.0">
+                          <columns>
+                            <TableColumn fx:id="tc_nazwaK" prefWidth="125.0" text="Nazwa" />
+                            <TableColumn fx:id="tc_isoK" prefWidth="121.0" text="ISO" />
+                              <TableColumn fx:id="tc_populacjaK" prefWidth="121.0" text="Populacja" />
+                              <TableColumn fx:id="tc_dataK" prefWidth="142.0" text="Data założenia" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txt_idK" layoutX="16.0" layoutY="14.0" prefHeight="25.0" prefWidth="29.0" visible="false" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab_druzyna" onSelectionChanged="#selectedTab" text="Drużyna">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="30.0" prefHeight="25.0" prefWidth="150.0" text="Zarządzanie drużynami" textAlignment="CENTER" />
+                        <TextField fx:id="txt_nazwaD" layoutX="33.0" layoutY="60.0" prefWidth="150.0" promptText="Nazwa" />
+                        <DatePicker fx:id="dataD" editable="false" layoutX="33.0" layoutY="90.0" prefHeight="25.0" prefWidth="175.0" promptText="Data utworzenia" />
+                        <TextField fx:id="txt_liczbaczlonkowD" layoutX="33.0" layoutY="120.0" prefHeight="25.0" prefWidth="150.0" promptText="Liczba członków" />
+                        <TextField fx:id="txt_sponsorD" layoutX="33.0" layoutY="150.0" prefHeight="25.0" prefWidth="150.0" promptText="Sponsor" />
+                        <Button fx:id="btn_dodajDruzyna" layoutX="33.0" layoutY="270.0" mnemonicParsing="false" onAction="#addDruzyna" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: rgb(127, 219, 94);" text="Dodaj" />
+                        <Button layoutX="33.0" layoutY="300.0" mnemonicParsing="false" onAction="#clearDruzyna" prefHeight="25.0" prefWidth="150.0" text="Wyczyść formularz" />
+                        <Button fx:id="btn_edytujDruzyna" layoutX="33.0" layoutY="330.0" mnemonicParsing="false" onAction="#editDruzyna" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: orange;" text="Edytuj" />
+                        <Button fx:id="btn_usunDruzyna" layoutX="33.0" layoutY="360.0" mnemonicParsing="false" onAction="#deleteDruzyna" prefHeight="25.0" prefWidth="149.0" style="-fx-background-color: red;" text="Usuń" />
+                        <Button fx:id="btn_zaladujDruzyna" layoutX="33.0" layoutY="390.0" mnemonicParsing="false" onAction="#loadDruzyna" prefHeight="25.0" prefWidth="151.0" style="-fx-background-color: #4fb2ff;" text="Załaduj" />
+                        <TableView fx:id="tv_druzyna" layoutX="220.0" layoutY="20.0" prefHeight="395.0" prefWidth="510.0">
+                          <columns>
+                            <TableColumn fx:id="tc_nazwaD" prefWidth="122.0" text="Nazwa" />
+                            <TableColumn fx:id="tc_dataD" prefWidth="132.0" text="Data utworzenia" />
+                              <TableColumn fx:id="tc_liczbaczlonkowD" prefWidth="138.0" text="Liczba członków" />
+                              <TableColumn fx:id="tc_sponsorD" prefWidth="117.0" text="Sponsor" />
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="txt_idD" layoutX="14.0" layoutY="12.0" prefHeight="25.0" prefWidth="28.0" visible="false" />
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+            <Tab fx:id="tab_prefmapa" onSelectionChanged="#selectedTab" text="Preferowana mapa">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="33.0" layoutY="30.0" prefHeight="25.0" prefWidth="150.0" text="Ulubione mapy zawodników" textAlignment="CENTER" />
+                        <ComboBox fx:id="combo_mapa" layoutX="33.0" layoutY="60.0" prefHeight="25.0" prefWidth="150.0" promptText="Mapa" />
+                        <ComboBox fx:id="combo_zawodnik" layoutX="33.0" layoutY="90.0" prefHeight="25.0" prefWidth="150.0" promptText="Zawodnik" />
+                        <Button fx:id="btn_dodajPM" layoutX="33.0" layoutY="270.0" mnemonicParsing="false" onAction="#addPrefmapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: rgb(127, 219, 94);" text="Dodaj" />
+                        <Button layoutX="33.0" layoutY="300.0" mnemonicParsing="false" onAction="#clearPrefMapa" prefHeight="25.0" prefWidth="150.0" text="Wyczyść formularz" />
+                        <Button fx:id="btn_edytujPM" layoutX="33.0" layoutY="330.0" mnemonicParsing="false" onAction="#editPrefmapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: orange;" text="Edytuj" />
+                        <Button fx:id="btn_usunPM" layoutX="33.0" layoutY="360.0" mnemonicParsing="false" onAction="#deletePrefmapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: red;" text="Usuń" />
+                        <Button fx:id="btn_zaladujPM" layoutX="33.0" layoutY="390.0" mnemonicParsing="false" onAction="#loadPrefmapa" prefHeight="25.0" prefWidth="150.0" style="-fx-background-color: #4fb2ff;" text="Załaduj" />
+                        <TableView fx:id="tv_prefmapa" layoutX="220.0" layoutY="20.0" prefHeight="395.0" prefWidth="510.0">
+                          <columns>
+                            <TableColumn fx:id="tc_zawodnik" prefWidth="265.0" text="Zawodnik" />
+                            <TableColumn fx:id="tc_mapa" minWidth="0.0" prefWidth="244.0" text="Mapa" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

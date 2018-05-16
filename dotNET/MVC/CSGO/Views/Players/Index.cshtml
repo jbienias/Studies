@@ -1,0 +1,48 @@
+﻿@model IEnumerable<CSGO.Models.Player>
+@{
+    ViewData["Title"] = "Players";
+}
+<h3><strong><a asp-area="" asp-controller="Players" asp-action="Index">PLAYERS</a></strong></h3>
+@if (User.IsInRole("Administrator"))
+{
+    <p>
+        <a asp-action="Create" id="create_player" class="btn btn-sm btn-success">Create</a>
+    </p>
+}
+<form asp-controller="Players" asp-action="Index" method="get">
+    <p>
+        Nickname: <input type="text" name="nickname" style="color:black" />
+        <input type="submit" value="Filter" style="color:black" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Nickname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfBirth)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Team)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            @Html.Partial("_Player", item);
+        }
+    </tbody>
+</table>

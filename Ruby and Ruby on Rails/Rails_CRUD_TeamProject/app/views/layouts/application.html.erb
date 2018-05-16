@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CS:GO CRUD</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'cs.ico' %>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Font Awesome -->
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <!-- changes and usage: scss under span & helper; graphic location of fas'es: index -->
+  </head>
+
+  <body>
+    <% if content_for?(:navbar) %>
+      <%= yield(:navbar) %>
+    <% else %>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark mynavbar">
+        <div class="container">
+          <div class="navbar-header">
+             <a class="navbar-brand" href="/"><span class='fa fa-gamepad'></span> CS:GO</a>
+          </div>
+          <div class="navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><%= link_to "Players", players_path, :class => "nav-link" %></li>
+              <li class="nav-item"><%= link_to "Teams", teams_path, :class => "nav-link" %></li>
+              <li class="nav-item"><%= link_to "Match History", matches_path, :class => "nav-link" %></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <% end %>
+
+    <%= yield %>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+  </body>
+
+  <footer class="customfooter">
+    <hr />
+    <p style="text-align: center;">&copy; 2018. <a href="http://blog.counter-strike.net/" title="CS:GO">CS:GO</a> CRUD by Animal Crazy Team</p>
+  </footer>
+
+</html>

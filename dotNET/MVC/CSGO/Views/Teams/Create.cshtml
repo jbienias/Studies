@@ -1,0 +1,39 @@
+﻿@model CSGO.Models.Team
+
+@{
+    ViewData["Title"] = "Create Team";
+}
+
+<h3>Team Creation</h3>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DateOfFounding" class="control-label"></label>
+
+                <input asp-for="DateOfFounding" class="form-control" />
+                <!-- dziala🡣 -->
+                <!--<input class="form-control" type="text" data-val="true" data-val-required="The Date of founding field is required." id="DateOfFounding" name="DateOfFounding" value="" />
+                -->
+                <span asp-validation-for="DateOfFounding" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input id="create_team" type="submit" value="Create" class="btn btn-success" />
+                <a asp-action="Index" id="cancel_create_team" class="btn btn-default">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

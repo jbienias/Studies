@@ -1,0 +1,76 @@
+--DROP TABLE druzyna
+CREATE TABLE druzyna (
+id INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL,
+nazwa VARCHAR(25) NOT NULL UNIQUE,
+data_utworzenia DATE NOT NULL,
+liczba_czlonkow INTEGER NOT NULL CHECK(liczba_czlonkow > 0),
+sponsor VARCHAR(25) NOT NULL
+);
+GO
+
+--DROP TABLE mapa
+CREATE TABLE mapa (
+id INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL,
+nazwa VARCHAR(25) NOT NULL UNIQUE,
+data_stworzenia DATE NOT NULL,
+rozmiar INTEGER NOT NULL CHECK(rozmiar >= 0),
+ocena INTEGER NOT NULL CHECK(ocena >= 0 AND ocena <= 10)
+);
+GO
+--DROP TABLE zawodnik
+CREATE TABLE zawodnik (
+id INTEGER PRIMARY KEY IDENTITY(1,1) NOT NULL,
+imie VARCHAR(25) NOT NULL,
+nazwisko VARCHAR(25) NOT NULL,
+pseudonim VARCHAR(25) NOT NULL UNIQUE,
+stawka DECIMAL(8,2) NOT NULL,
+druzyna_id INTEGER NOT NULL REFERENCES druzyna(id) ON DELETE CASCADE,
+);
+GO
+--DROP TABLE preferowana_mapa
+CREATE TABLE preferowana_mapa (
+mapa_id INTEGER NOT NULL REFERENCES mapa(id) ON DELETE CASCADE,
+zawodnik_id INTEGER NOT NULL REFERENCES zawodnik(id) ON DELETE CASCADE
+);
+GO
+
+INSERT INTO druzyna(nazwa, data_utworzenia, liczba_czlonkow, sponsor)VALUES
+('Virtus.pro', '2003-04-12', 6, 'Steelseries'),
+('Ninjas in Pyjamas', '2012-03-14', 8, 'Heineken'),
+('Fnatic', '2012-02-12', 6, 'Intel'),
+('Natus Vincere', '2009-05-02', 7, 'Amarena'),
+('Team EnVyUs', '2015-02-03', 11, 'Rayman');
+SELECT * FROM druzyna
+
+INSERT INTO mapa(nazwa, data_stworzenia, rozmiar, ocena) VALUES
+('de_dust2', '1999-05-20', '12', '10'),
+('de_train', '2001-07-12', '6', '7'),
+('de_mirage', '2000-04-10', '8', '5'),
+('de_inferno', '1996-02-13', '15', '8'),
+('de_cobblestone', '2016-05-15', '11', '9'),
+('de_overpass', '1998-07-23', '14', '3'),
+('de_cache', '2013-02-11', '17', '4'),
+('de_nuke', '1994-03-22', '6', '6');
+SELECT * FROM mapa
+
+INSERT INTO zawodnik(imie, nazwisko, pseudonim, stawka, druzyna_id) VALUES
+('Filip', 'Kubski', 'Neo',40000, 1),
+('Jarosław', 'Jarząbkowski', 'pashaBiceps',34000, 1),
+('Wiktor', 'Wojtas', 'TaZ',38000, 1),
+('Janusz', 'Pogorzelski', 'Snax', 32000, 2),
+('Paweł', 'Bieliński', 'byali', 29500, 2),
+('Christopher', 'Alesund', 'GeT-RiGhT', 26444, 3),
+('Patrik', 'Lindberg', 'f0rest',51000, 3),
+('Adam', 'Friberg', 'Friberg', 45200, 4),
+('Richard', 'Landström', 'Xizt', 48000, 5),
+('Jacob', 'Mourujärvi' , 'Pyth', 16000, 5);
+SELECT * FROM zawodnik;
+
+
+INSERT INTO preferowana_mapa(mapa_id, zawodnik_id)VALUES
+(1, 1),
+(2, 2),
+(3, 3),
+(4, 4),
+(5, 5);
+SELECT * FROM preferowana_mapa;

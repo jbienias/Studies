@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSGO", "CSGO\CSGO.csproj", "{4E678993-93B4-43D8-B322-180A3220A74C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSGO.Tests", "CSGO.Tests\CSGO.Tests.csproj", "{87EC3D81-AAC0-4A71-9FA7-7F6D075BFDBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSGO.SeleniumTests", "CSGO.SeleniumTests\CSGO.SeleniumTests.csproj", "{4720620D-7EFE-406C-A9DA-9A2620FE108A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSGO.CodedUI", "CSGO.CodedUI\CSGO.CodedUI.csproj", "{BAA292B6-7F89-43C2-BC52-37145A1639F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E678993-93B4-43D8-B322-180A3220A74C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E678993-93B4-43D8-B322-180A3220A74C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E678993-93B4-43D8-B322-180A3220A74C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E678993-93B4-43D8-B322-180A3220A74C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87EC3D81-AAC0-4A71-9FA7-7F6D075BFDBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87EC3D81-AAC0-4A71-9FA7-7F6D075BFDBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87EC3D81-AAC0-4A71-9FA7-7F6D075BFDBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87EC3D81-AAC0-4A71-9FA7-7F6D075BFDBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4720620D-7EFE-406C-A9DA-9A2620FE108A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4720620D-7EFE-406C-A9DA-9A2620FE108A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4720620D-7EFE-406C-A9DA-9A2620FE108A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4720620D-7EFE-406C-A9DA-9A2620FE108A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BAA292B6-7F89-43C2-BC52-37145A1639F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BAA292B6-7F89-43C2-BC52-37145A1639F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BAA292B6-7F89-43C2-BC52-37145A1639F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BAA292B6-7F89-43C2-BC52-37145A1639F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3D3AB895-465D-4A14-A0A5-8DA68ED120A7}
+	EndGlobalSection
+EndGlobal

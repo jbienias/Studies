@@ -1,0 +1,40 @@
+cat hash.pdf personal.txt | md5sum >> hash.txt
+cat hash.pdf personal_.txt | md5sum >> hash.txt
+8f9093841fef4cd2c7713c1fcacae5cc
+26a184cab29651f9cbdaed523b0fbc72
+Difference in bites: 67 (from 128, percentage: 52%).
+
+cat hash.pdf personal.txt | sha1sum >> hash.txt
+cat hash.pdf personal_.txt | sha1sum >> hash.txt
+5b97465c1e40bb5a7a31a32e37f8a3a36e4f735e
+cd659ac99b8e041e3c2e342883b3d776fd7a6287
+Difference in bites: 82 (from 160, percentage: 51%).
+
+cat hash.pdf personal.txt | sha224sum >> hash.txt
+cat hash.pdf personal_.txt | sha224sum >> hash.txt
+0af5a443e9778e1154845d9fa4dfe93260236bcddb99a0dcdc617640
+4c49e5b9ab407f12eabfbfb212731e5e5ca84892f2d7e455a843e73c
+Difference in bites: 112 (from 224, percentage: 50%).
+
+cat hash.pdf personal.txt | sha256sum >> hash.txt
+cat hash.pdf personal_.txt | sha256sum >> hash.txt
+27be376b8749508c46ce575dfa1d049274bbb0ef2dbad3ade873619b5dfdf138
+6ef7382fe8a42e5af084b71b72aa77a44f06da68361ad00af79e57b6a8f2a513
+Difference in bites: 134 (from 256, percentage: 52%).
+
+cat hash.pdf personal.txt | sha384sum >> hash.txt
+cat hash.pdf personal_.txt | sha384sum >> hash.txt
+06653d749bdde8bce028da1f42ef7bd6e88902d8819f873ce5d955f987d0c14bb4d3a0cd7cfeb08bd6fc55c2d952915f
+012522af733825244cf349ed2f3a87a3b641bc1f55c1e920aa55d79e91426596193053070efa12a4d878f0f430990d99
+Difference in bites: 202 (from 384, percentage: 53%).
+
+cat hash.pdf personal.txt | sha512sum >> hash.txt
+cat hash.pdf personal_.txt | sha512sum >> hash.txt
+9b155370a63d8815acb0f66644f2091bccfbe2c485c2fac5f1a0126907a482aafe7a99d4886706fa626853aefdebae525272637623de553a3abc210f6dfdb983
+4444522dab85667ee0a55d3530354b0260b65a8d7b92b61e241c2cbd0bd299f5751a3807112561d144c644ea7c5ffe5869889d9db0b30da6b4674b3f0d9b9bd0
+Difference in bites: 253 (from 512, percentage: 49%).
+
+
+
+
+

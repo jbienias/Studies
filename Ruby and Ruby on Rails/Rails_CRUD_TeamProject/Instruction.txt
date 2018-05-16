@@ -1,0 +1,16 @@
+# pobieramy Repozytorium:
+git clone https://github.com/Rails-52/dockerized-animalcrazy.git
+
+# Uruchamiamy docker'a
+sudo systemctl start docker
+
+# Skasowalismy wszystkie obrazy
+docker rmi $(docker images -q) --force
+
+# pullujemy obraz z dockerhba
+docker pull msegun/dockerizedanimalcrazy_web
+
+# Pullujemy baze danych
+docker-compose pull
+
+docker-compose up

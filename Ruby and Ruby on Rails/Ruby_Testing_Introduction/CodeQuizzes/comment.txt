@@ -1,0 +1,5 @@
+Done everything except :
+- last two in http://www.codequizzes.com/ruby/test-driven-development/rspec-arrays-expectations
+- last one in http://www.codequizzes.com/ruby/test-driven-development/strings-integers-tdd
+
++ Gemfile lacks proper quality :P

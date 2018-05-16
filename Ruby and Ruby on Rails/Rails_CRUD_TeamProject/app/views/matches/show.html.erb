@@ -1,0 +1,44 @@
+<p id="notice" class="text-center"><%= modified_notice %></p>
+
+<div class="container">
+    <div class="d-inline-block">
+        <h2>Match (<%= @match.id %>)</h2>
+    </div>
+
+    <hr />
+
+    <p>
+      <strong>Team one:</strong>
+      <% if @match.team_one != nil %>
+        <%= link_to @match.team_one.name, @match.team_one %>
+      <% else %>
+        <i>Team does not exist</i>
+      <% end %>
+    </p>
+
+    <p>
+      <strong>Team two:</strong>
+      <% if @match.team_two != nil %>
+        <%= link_to @match.team_two.name, @match.team_two %>
+      <% else %>
+        <i>Team does not exist</i>
+      <% end %>
+    </p>
+
+    <p>
+      <strong>Result:</strong>
+      <%= @match.result %>
+    </p>
+
+    <p>
+      <strong>Date:</strong>
+      <%= @match.date.strftime("%d.%m.%Y") %>
+    </p>
+
+    <hr />
+
+    <%= link_to 'Edit', edit_match_path(@match), :class => "btn btn-success btn-sm" %>
+    <%= link_to 'Delete', @match, method: :delete, data: { confirm: 'Are you sure you want to delete this match?' }, :class => "btn btn-danger btn-sm" %>
+    <%= link_to 'Back', matches_path, :class => "btn btn-primary btn-sm" %>
+
+</div>

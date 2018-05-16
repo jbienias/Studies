@@ -1,0 +1,16 @@
+<p id="notice" class="text-center"><%= notice %></p>
+
+<div class="container">
+    <div class="d-inline-block">
+        <h2>Create New Player</h2>
+    </div>
+
+    <hr />
+
+    <%= render 'form', player: @player %>
+
+    <hr />
+
+    <%= link_to 'Back', players_path, :class => "btn btn-primary btn-sm" %>
+
+</div>

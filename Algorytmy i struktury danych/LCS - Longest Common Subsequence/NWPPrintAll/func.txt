@@ -1,0 +1,30 @@
+void LCS_PRINT_ALL(char* x, int i, int j)
+{
+    //for now it only works for words like : aaabbbccc cccbbbaaa
+    if(i==-1 || j==-1) //b size = m, c size = m+1
+        return;
+
+    if(b[i][j] == '#' && flags[i][j] == 0)
+    {
+        flags[i][j] = 4;
+        LCS_PRINT_ALL(x, i, j-1);
+        LCS_PRINT_ALL(x, i-1, j);
+    }
+
+    else if (b[i][j] == '\\' && flags[i][j] == 0)
+    {
+        flags[i][j] = 1;
+        LCS_PRINT_ALL(x,i-1, j-1);
+        printf("%c", x[i]);
+    }
+    else if (b[i][j] == '|' && flags[i][j] == 0)
+    {
+        flags[i][j] = 2;
+        LCS_PRINT_ALL(x,i-1, j);
+    }
+    else if (b[i][j] == '-' && flags[i][j] == 0)
+    {
+        flags[i][j] = 3;
+        LCS_PRINT_ALL(x,i, j-1);
+    }
+}

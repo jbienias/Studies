@@ -1,0 +1,81 @@
+﻿@model IEnumerable<CSGO.Models.Team>
+
+@{
+    ViewData["Title"] = "Teams";
+}
+
+<h3><strong><a asp-area="" asp-controller="Teams" asp-action="">TEAMS</a></strong></h3>
+@if (User.IsInRole("Administrator"))
+{
+    <p>
+        <a asp-action="Create" id="create_team" class="btn btn-sm btn-success">Create</a>
+    </p>
+}
+<form asp-controller="Teams" asp-action="Index" method="get">
+    <p>
+        Team Name: <input type="text" name="teamName" style="color:black" />
+        <input type="submit" value="Filter" style="color:black" />
+    </p>
+</form>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DateOfFounding)
+            </th>
+            <th>
+                Players Count
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            @Html.Partial("_Team", item);
+
+        }
+    </tbody>
+</table>
+
+
+@if (ViewContext.RouteData.Values["id"] != null)
+{
+    int ID = Int32.Parse(ViewContext.RouteData.Values["id"].ToString());
+    Team team = null;
+    foreach (var t in Model)
+    {
+        if (t.TeamId == ID)
+        {
+            team = t;
+        }
+    }
+
+    @if (team != null && team.Players.Count > 0)
+    {
+        <h3>Players of '@team.Name'</h3>
+        <table class="table">
+            <tr>
+                <th>Full Name</th>
+                <th>Nickname</th>
+            </tr>
+            @foreach (var player in team.Players)
+            {
+                <tr>
+                    <td>@player.Name @player.Surname</td>
+                    <td>@player.Nickname</td>
+                </tr>
+            }
+        </table>
+
+    }
+    else if (team.Players.Count == 0)
+    {
+        <h3>'@team.Name' doesn't have any players!</h3>
+
+    }
+}
+

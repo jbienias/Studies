@@ -1,0 +1,94 @@
+<p id="notice" class="text-center"><%= modified_notice %></p>
+
+<% content_for :navbar do %>
+     <%= render 'navbarindex' %>
+<% end %>
+
+<div class="container">
+    <div class="d-inline-block">
+        <h1>Players</h1>
+    </div>
+    <br/>
+
+    <div class="d-inline-block float-left" style="margin-top: 10px;">
+        <%= link_to 'Add Player', new_player_path, :class => "btn btn-primary btn-sm" %>
+    </div>
+
+    <table class="table table-stripped table-hover index indexborders">
+      <thead>
+        <tr>
+          <th class="indexborders"><%= sort_link "name" %></th>
+          <th class="indexborders"><%= sort_link "surname" %></th>
+          <th class="indexborders"><%= sort_link "nickname" %></th>
+          <th class="indexborders"><%= sort_link "date_of_birth" %></th>
+          <th class="indexborders">Team</th>
+          <th  class="indexborders" colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @players.each do |player| %>
+          <tr>
+            <td class="textfield indexborders" data-toggle="modal" data-target="#modalShowRow<%= player.id %>"><%= player.name %></td>
+            <td class="textfield indexborders" data-toggle="modal" data-target="#modalShowRow<%= player.id %>"><%= player.surname %></td>
+            <td class="textfield indexborders" data-toggle="modal" data-target="#modalShowRow<%= player.id %>"><%= player.nickname %></td>
+            <td class="nontextfield indexborders" data-toggle="modal" data-target="#modalShowRow<%= player.id %>"><%= player.date_of_birth.strftime("%d.%m.%Y") %></td>
+            <td class="textfield indexborders" data-toggle="modal" data-target="#modalShowRow<%= player.id %>">
+                <% if player.team.present? %>
+                  <%= link_to player.team.name, player.team%>
+                <% end %>
+            </td>
+
+            <!-- modalShowRow -->
+            <div class="modal fade" id="modalShowRow<%= player.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">'<b><%= player.nickname %></b>' player details</h4>
+                  </div>
+                  <div class="modal-body">
+                    <b> Name:  </b> <%= player.name %> <br/>
+                    <b> Surame:  </b> <%= player.surname %> <br/>
+                    <b> Nickname:  </b> <%= player.nickname %> <br/>
+                    <b> Date of birth:  </b> <%= player.date_of_birth.strftime("%d.%m.%Y") %> <br/>
+                    <% if player.team.present? %>
+                      <b> Team:  </b> <%= link_to player.team.name, player.team%> <br/>
+                    <% end %>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- end of modalShowRow -->
+
+            <td align=center class="indexborders">
+              <button type="button" class="btn btn-warning minebtn btn-sm" data-toggle="modal" data-target="#modalShowRow<%= player.id %>">Show</button>
+                <%= link_to 'Edit', edit_player_path(player), :class => "btn btn-success btn-sm" %>
+                <button type="button" class="btn btn-danger minebtn btn-sm" data-toggle="modal" data-target="#modalDelete<%= player.id %>">Delete</span></button>
+
+                <!-- modalDelete -->
+                <div class="modal fade" id="modalDelete<%= player.id %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Delete confirmation</h4>
+                      </div>
+                      <div class="modal-body">
+                        Are you sure you want to delete this player: <br/>
+                        <%= player.name %> '<%= player.nickname %>' <%= player.surname %>?
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default minebtn btn-sm" data-dismiss="modal">No</button>
+                        <%= link_to 'Delete', player, method: :delete, :class => "btn btn-danger minebtn btn-sm" %>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- end of modalDelete -->
+            </td>
+
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+</div>

@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mynavbar">
+  <div class="container">
+    <div class="navbar-header">
+       <a class="navbar-brand" href="/"><span class='fa fa-gamepad'></span> CS:GO</a>
+    </div>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><%= link_to "Players", players_path, :class => "nav-link" %></li>
+        <li class="nav-item"><%= link_to "Teams", teams_path, :class => "nav-link" %></li>
+        <li class="nav-item"><%= link_to "Match History", matches_path, :class => "nav-link" %></li>
+      </ul>
+    </div>
+
+    <div class="divrightoriented">
+        <%= form_tag(players_path, :method => "get", id: "search-form") do %>
+          <%= text_field_tag :search, params[:search], placeholder: "Search for players" %>
+          <div class="btn-group minebtn btn-sm" role="group">
+            <%= button_tag(type: 'submit', class: "btn btn-search btn-sm") do %>
+              <span class='fa fa-search'></span>
+            <% end %>
+            <%= link_to(raw('<span class="fa fa-times"></span>'), players_path, class: 'btn btn-custom minebtn btn-sm') %>
+          </div>
+        <% end %>
+
+        <% if @players.blank? && Player.count != 0 %>
+          <h6>There are no teams which name contains '<%= params[:search] %>' &emsp;</h6>
+        <% end %>
+        <% if Player.count == 0 %>
+          There are no games &emsp;
+        <% end %>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+<p id="notice" class="text-center"><%= modified_notice %></p>
+
+<div class="container">
+    <div class="d-inline-block">
+        <h2>Edit Team:  <%= @team.name %></h2>
+    </div>
+
+    <hr />
+
+    <%= render 'form', team: @team %>
+
+    <hr />
+
+    <%= link_to 'Show', @team , :class => "btn btn-warning btn-sm" %>
+    <%= link_to 'Back', teams_path, :class => "btn btn-primary btn-sm" %>
+
+</div>

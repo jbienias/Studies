@@ -1,0 +1,22 @@
+﻿@using CSGO.Models;
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<h1 class="text-danger">An error occurred while processing your request.</h1>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <h2><strong>Response:</strong> <code>@Model.Response</code></h2>
+    </p>
+    <p>
+        <h2> <strong>Request ID:</strong> <code>@Model.RequestId</code></h2>
+    </p>
+}
+
+@if (Model.Ip.ToString().Contains("127.0.0.1"))
+{
+    <p><h1> Jestes na localhoscie! </h1></p>
+}
