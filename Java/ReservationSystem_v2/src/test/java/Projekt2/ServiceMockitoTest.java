@@ -119,7 +119,6 @@ public class ServiceMockitoTest {
 
     @Test
     public void updateRestaurantRestaurantExistsButProvidedDataIsNotValidThrowsIllegalArgumentException(){
-        Restaurant r = new Restaurant();
         doReturn(true).when(restaurantRepository).restaurantExists(0);
         doReturn(false).when(restaurantRepository).validateRestaurant(any(Restaurant.class));
 

@@ -1,7 +1,9 @@
 # Testowanie aplikacji JAVA 2017-2018
 ## Projekt 2 (Maven, JUnit oraz atrapy) 
 
-Projekt nr. 5
+| Travis CI Status | Projekt |
+:--:|:--:
+| [![Build Status](https://travis-ci.com/TestowanieJAVA2017-2018Gr2/projekt2-jbienias.svg?token=s9oYyNnnj1vqhDBonZ1p&branch=master)](https://travis-ci.com/TestowanieJAVA2017-2018Gr2/projekt2-jbienias) | V |
 
 ```java
 mvn package

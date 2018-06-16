@@ -112,7 +112,6 @@ public class ServiceEasyMockTest {
 
     @Test
     public void updateUserUserExistsButNewDataIsIncorrectThrowsIllegalArgumentException() {
-        User u = new User();
         expect(userRepository.userExists(0)).andReturn(true);
         expect(userRepository.validateUser(anyObject(User.class))).andReturn(false);
         replay(userRepository);
