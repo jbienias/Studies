@@ -11,8 +11,11 @@ public class BrowserSelecor {
                 case "Explorer":
                     System.setProperty("webdriver.ie.driver", "resources/IEDriverServer.exe");
                     break;
+                case "Edge":
+                    System.setProperty("webdriver.edge.driver", "resources/MicrosoftWebDriver.exe");
+                    break;
                 case "Opera":
-                    System.setProperty("webdriver.chrome.driver", "resources/operadriver.exe");
+                    System.setProperty("webdriver.opera.driver", "resources/operadriver.exe");
                     break;
             }
         } else {
@@ -23,9 +26,12 @@ public class BrowserSelecor {
                 case "Firefox":
                     System.setProperty("webdriver.gecko.driver", "resources/geckodriver");
                     break;
+                case "Edge":
+                    throw new IllegalArgumentException("Explorer browser is accesed only on Windows");
                 case "Explorer":
                     throw new IllegalArgumentException("Explorer browser is accesed only on Windows");
                 case "Opera":
+                    System.setProperty("webdriver.opera.driver", "resources/operadriver");
                     break;
             }
         }

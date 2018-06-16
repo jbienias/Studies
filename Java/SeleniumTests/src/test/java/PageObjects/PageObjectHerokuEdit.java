@@ -19,7 +19,7 @@ public class PageObjectHerokuEdit {
     public void editPlayer() throws InterruptedException {
         WebElement element = driver.findElement(By.xpath("//tr[td[1]//text()[contains(., 'Adam')]]/td[5]/a[@class='btn btn-success btn-sm']"));
         element.click();
-        //wait.until(ExpectedConditions.urlContains("edit")); <- przepraszam, tu musialem, nie wiem czemu nie widzi tego
+        //wait.until(ExpectedConditions.urlContains("edit"));
         Thread.sleep(5000);
         driver.findElement(By.id("player_name")).sendKeys("Nowy");
         driver.findElement(By.name("commit")).click();
@@ -28,7 +28,7 @@ public class PageObjectHerokuEdit {
     public void editPlayerWrong() throws InterruptedException {
         WebElement element = driver.findElement(By.xpath("//tr[td[1]//text()[contains(., 'Adam')]]/td[5]/a[@class='btn btn-success btn-sm']"));
         element.click();
-        //wait.until(ExpectedConditions.urlContains("edit"));  <- tu również
+        //wait.until(ExpectedConditions.urlContains("edit"));
         Thread.sleep(5000);
         driver.findElement(By.id("player_name")).clear();
         driver.findElement(By.name("commit")).click();

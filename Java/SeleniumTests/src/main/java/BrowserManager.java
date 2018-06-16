@@ -1,9 +1,12 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.opera.OperaOptions;
 
 public class BrowserManager {
     public static WebDriver initializeBrowser(WebDriver driver, String browser) {
@@ -34,8 +37,13 @@ public class BrowserManager {
             case "Explorer":
                 driver = new InternetExplorerDriver();
                 break;
+            case "Edge":
+                driver = new EdgeDriver();
+                break;
             case "Opera":
-                driver = new ChromeDriver();
+                OperaOptions operaOptions = new OperaOptions();
+                operaOptions.setBinary("C:\\Program Files\\Opera\\53.0.2907.68\\opera.exe");
+                driver = new OperaDriver(operaOptions);
                 break;
         }
         return driver;

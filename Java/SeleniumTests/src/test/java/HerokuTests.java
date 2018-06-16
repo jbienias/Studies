@@ -11,25 +11,26 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class HerokuTests {
-    private static WebDriver driver;
+
+    private WebDriver driver;
     private PageObjectHeroku pageObjectHeroku;
     private PageObjectHerokuAdd pageObjectHerokuAdd;
     private PageObjectHerokuEdit pageObjectHerokuEdit;
 
     @BeforeEach
     public void setUp() {
-        driver = BrowserManager.initializeBrowser(driver, "Chrome");
+        driver = BrowserManager.initializeBrowser(driver, "Firefox");
         driver.manage().window().maximize();
     }
 
     @Test
-    public void checkTitle() {
+    public void titlePageContainsHerokuString() {
         pageObjectHeroku = new PageObjectHeroku(driver);
         assertTrue(pageObjectHeroku.assertTitle());
     }
 
     @Test
-    public void addCorrectlyFilledPlayer(){
+    public void addPlayerCorrectData(){
         pageObjectHerokuAdd = new PageObjectHerokuAdd(driver);
         pageObjectHerokuAdd.addCorrectPlayer();
         String result = pageObjectHerokuAdd.getResultNotice();
@@ -37,7 +38,7 @@ public class HerokuTests {
     }
 
     @Test
-    public void addEmptyPlayer(){
+    public void addPlayerEmptyForm(){
         pageObjectHerokuAdd = new PageObjectHerokuAdd(driver);
         pageObjectHerokuAdd.addEmptyPlayer();
         String result = pageObjectHerokuAdd.getResultNotice();
@@ -46,7 +47,7 @@ public class HerokuTests {
     }
 
     @Test
-    public void editPlayer() throws InterruptedException {
+    public void editPlayerCorrectData() throws InterruptedException {
         pageObjectHerokuEdit = new PageObjectHerokuEdit(driver);
         pageObjectHerokuEdit.editPlayer();
         String result = pageObjectHerokuEdit.getEditedWebElement().getText();
@@ -54,7 +55,7 @@ public class HerokuTests {
     }
 
     @Test
-    public void editPlayerWrong() throws InterruptedException {
+    public void editPlayerIncorrectData() throws InterruptedException {
         pageObjectHerokuEdit = new PageObjectHerokuEdit(driver);
         pageObjectHerokuEdit.editPlayerWrong();
         assertThat(pageObjectHerokuEdit.currentUrlIsEdit()).isFalse();

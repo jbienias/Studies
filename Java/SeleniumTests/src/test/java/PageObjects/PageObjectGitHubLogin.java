@@ -15,14 +15,14 @@ public class PageObjectGitHubLogin {
         wait = new WebDriverWait(driver, 10);
     }
 
-    public void loginToExistingAccount() throws InterruptedException {
+    public void loginToExistingAccount() {
         driver.findElement(By.id("login_field")).sendKeys("zbychujanusz");
         driver.findElement(By.name("password")).sendKeys("supertajnehaslo123");
         driver.findElement(By.name("commit")).click();
         wait.until(ExpectedConditions.urlMatches("https://github.com/"));
     }
 
-    public void loginToNonExistingAccount() throws InterruptedException {
+    public void loginToNonExistingAccount() {
         driver.findElement(By.id("login_field")).sendKeys("423 43 q");
         driver.findElement(By.name("password")).sendKeys("1");
         driver.findElement(By.name("commit")).click();

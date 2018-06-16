@@ -9,32 +9,32 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class GitHubTests {
-    private static WebDriver driver;
+
+    private WebDriver driver;
     private PageObjectGitHub pageObjectGitHub;
     private PageObjectGitHubLogin pageObjectGitHubLogin;
 
     @BeforeEach
     public void setUp() {
-        driver = BrowserManager.initializeBrowser(driver, "Chrome");
+        driver = BrowserManager.initializeBrowser(driver, "Firefox");
         driver.manage().window().maximize();
     }
 
     @Test
-    public void checkTitle() {
+    public void titlePageContainsGitHubString() {
         pageObjectGitHub = new PageObjectGitHub(driver);
         assertTrue(pageObjectGitHub.assertTitle());
     }
 
-
     @Test
-    public void loginCorrect() throws InterruptedException {
+    public void loginCorrectData() {
         pageObjectGitHubLogin = new PageObjectGitHubLogin(driver);
         pageObjectGitHubLogin.loginToExistingAccount();
         assertThat(pageObjectGitHubLogin.getLoggedInUrl()).endsWith(".com/");
     }
 
     @Test
-    public void loginWrong() throws InterruptedException {
+    public void loginIncorrectData() {
         pageObjectGitHubLogin = new PageObjectGitHubLogin(driver);
         pageObjectGitHubLogin.loginToNonExistingAccount();
         assertThat(pageObjectGitHubLogin.getErrorMessage()).contains("Incorrect");
