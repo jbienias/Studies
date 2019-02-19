@@ -1,0 +1,49 @@
+if(Faction == "Alliance") {
+  Faction_as_int <- 0
+}
+if(Faction == "Horde") {
+  Faction_as_int <- 1
+}
+if (Character_class == "Warrior") {
+  Class_as_int <- 0
+}
+if (Character_class == "Paladin") {
+  Class_as_int <- 1
+}
+if (Character_class == "Hunter") {
+  Class_as_int <- 2
+}
+if (Character_class == "Rogue") {
+  Class_as_int <- 3
+}
+if (Character_class == "Priest") {
+  Class_as_int <- 4
+}
+if (Character_class == "Shaman") {
+  Class_as_int <- 5
+}
+if (Character_class == "Mage") {
+  Class_as_int <- 6
+}
+if (Character_class == "Warlock") {
+  Class_as_int <- 7
+}
+if (Character_class == "Monk") {
+  Class_as_int <- 8
+}
+if (Character_class == "Druid") {
+  Class_as_int <- 9
+}
+if (Character_class == "Demon Hunter") {
+  Class_as_int <- 10
+}
+if (Character_class == "Death Knight") {
+  Class_as_int <- 11
+}
+if (Role == "dps") {
+  Role_as_int <- 1
+}
+if (Role == "heal") {
+  Role_as_int <- 0
+}
+

@@ -1,0 +1,323 @@
+"rules","support","confidence","lift","count"
+"{Faction=Horde,Character_class=Melee,Honor=Above average,Role=heal} => {Result=Win}",0.00873119078580717,1,1.97686375321337,47
+"{Faction=Horde,Character_class=Versatile,Killing_blows=Above average,Honor=Above average} => {Result=Win}",0.0130039011703511,1,1.97686375321337,70
+"{Faction=Horde,Character_class=Versatile,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.0148616013375441,1,1.97686375321337,80
+"{Faction=Horde,Character_class=Versatile,Honor=Above average,Role=dps} => {Result=Win}",0.0256362623072636,1,1.97686375321337,138
+"{Faction=Horde,Killing_blows=Above average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.0183912316552108,1,1.97686375321337,99
+"{Killing_blows=Above average,Deaths=Below average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0365966932937024,1,1.97686375321337,197
+"{Faction=Horde,Honorable_kills=Below average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.0200631618056846,1,1.97686375321337,108
+"{Faction=Horde,Character_class=Ranged,Honorable_kills=Above average,Honor=Above average,Role=heal} => {Result=Win}",0.00687349061861416,1,1.97686375321337,37
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Honor=Above average,Role=heal} => {Result=Win}",0.0256362623072636,1,1.97686375321337,138
+"{Faction=Horde,Character_class=Versatile,Honorable_kills=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.00947427085268438,1,1.97686375321337,51
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0195058517555267,1,1.97686375321337,105
+"{Faction=Horde,Character_class=Versatile,Deaths=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.00631618056845625,1,1.97686375321337,34
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0260078023407022,1,1.97686375321337,140
+"{Faction=Horde,Character_class=Versatile,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0174623815716143,1,1.97686375321337,94
+"{Faction=Horde,Deaths=Above average,Honorable_kills=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.00575887051829835,1,1.97686375321337,31
+"{Faction=Horde,Killing_blows=Below average,Damage_done=Above average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.00538733048485974,1,1.97686375321337,29
+"{Faction=Horde,Character_class=Melee,Damage_done=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.00910273081924577,1,1.97686375321337,49
+"{Faction=Horde,Character_class=Melee,Deaths=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0133754412037897,1,1.97686375321337,72
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0109604309864388,1,1.97686375321337,59
+"{Character_class=Melee,Killing_blows=Below average,Healing_done=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.00594464053501765,1,1.97686375321337,32
+"{Faction=Horde,Killing_blows=Below average,Healing_done=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.00631618056845625,1,1.97686375321337,34
+"{Killing_blows=Below average,Deaths=Below average,Healing_done=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.00594464053501765,1,1.97686375321337,32
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.00854542076908787,1,1.97686375321337,46
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0299089726918075,1,1.97686375321337,161
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Below average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.00873119078580717,1,1.97686375321337,47
+"{Faction=Horde,Character_class=Ranged,Damage_done=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0284228125580531,1,1.97686375321337,153
+"{Faction=Horde,Character_class=Ranged,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0195058517555267,1,1.97686375321337,105
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0185770016719301,1,1.97686375321337,100
+"{Faction=Horde,Character_class=Ranged,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0362251532602638,1,1.97686375321337,195
+"{Faction=Horde,Character_class=Melee,Deaths=Above average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.00798811071892997,1,1.97686375321337,43
+"{Faction=Horde,Killing_blows=Below average,Deaths=Below average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.0161619914545792,1,1.97686375321337,87
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0575887051829835,1,1.97686375321337,310
+"{Faction=Horde,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0520156046814044,1,1.97686375321337,280
+"{Character_class=Melee,Killing_blows=Above average,Deaths=Above average,Honorable_kills=Below average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.00575887051829835,1,1.97686375321337,31
+"{Faction=Horde,Killing_blows=Above average,Deaths=Above average,Damage_done=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0139327512539476,1,1.97686375321337,75
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0178339216050529,1,1.97686375321337,96
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0243358721902285,1,1.97686375321337,131
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0235927921233513,1,1.97686375321337,127
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0821103473899313,0.997742663656885,1.97240130681785,442
+"{Faction=Horde,Killing_blows=Above average,Deaths=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0692922162362995,0.997326203208556,1.9715780212529,373
+"{Faction=Horde,Killing_blows=Above average,Damage_done=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0605610254504923,0.996941896024465,1.97081829831057,326
+"{Faction=Horde,Deaths=Below average,Damage_done=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0600037154003344,0.996913580246914,1.97076232187629,323
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.117592420583318,0.996850393700787,1.97063741068356,633
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0535017648151588,0.996539792387543,1.97002339420571,288
+"{Faction=Horde,Character_class=Ranged,Deaths=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0440274939624745,0.995798319327731,1.96855760298978,237
+"{Faction=Horde,Killing_blows=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0861972877577559,0.995708154506438,1.96837935942275,464
+"{Faction=Horde,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0410551736949656,0.995495495495496,1.96795896153223,221
+"{Faction=Horde,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.040683633661527,0.995454545454545,1.96787800888058,219
+"{Faction=Horde,Damage_done=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0811814973063348,0.995444191343964,1.96785754021467,437
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Honor=Above average} => {Result=Win}",0.0399405535946498,0.99537037037037,1.96771160620775,215
+"{Faction=Horde,Killing_blows=Above average,Deaths=Below average,Honor=Above average} => {Result=Win}",0.0793237971391417,0.995337995337995,1.96764760517974,427
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0384543934608954,0.995192307692308,1.96735960055369,207
+"{Faction=Horde,Killing_blows=Below average,Deaths=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0373397733605796,0.995049504950495,1.96707729898954,201
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0365966932937024,0.994949494949495,1.9668795928436,197
+"{Faction=Horde,Deaths=Below average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.0718929964703697,0.994858611825193,1.96669992928939,387
+"{Faction=Horde,Character_class=Versatile,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0358536132268252,0.994845360824742,1.96667373386691,193
+"{Faction=Horde,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0711499164034925,0.994805194805195,1.96659433111875,383
+"{Faction=Horde,Deaths=Below average,Damage_done=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0354820731933866,0.994791666666667,1.96656758783205,191
+"{Faction=Horde,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.105331599479844,0.994736842105263,1.96645920714382,567
+"{Faction=Horde,Deaths=Below average,Healing_done=Above average,Honor=Above average,Role=heal} => {Result=Win}",0.0347389931265094,0.99468085106383,1.96634852048351,187
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0689206762028609,0.994638069705094,1.96626394756611,371
+"{Faction=Horde,Honorable_kills=Above average,Honor=Above average,Role=heal} => {Result=Win}",0.031395132825562,0.994117647058824,1.96523514290035,169
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0280512725246145,0.993421052631579,1.96385807062644,151
+"{Faction=Horde,Character_class=Versatile,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0278655025078952,0.993377483443709,1.96377194027818,150
+"{Faction=Horde,Character_class=Versatile,Honor=Above average} => {Result=Win}",0.0546163849154746,0.993243243243243,1.96350656569166,294
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0273081924577373,0.993243243243243,1.96350656569166,147
+"{Faction=Horde,Killing_blows=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0265651123908601,0.993055555555556,1.96313553270494,143
+"{Faction=Horde,Character_class=Ranged,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0522013746981237,0.992932862190813,1.96289298463942,281
+"{Faction=Horde,Killing_blows=Below average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.0260078023407022,0.99290780141844,1.96284344290689,140
+"{Faction=Horde,Character_class=Ranged,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0501579045142114,0.992647058823529,1.96232799032209,270
+"{Faction=Horde,Killing_blows=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0490432844138956,0.992481203007519,1.96200011597116,264
+"{Faction=Horde,Character_class=Ranged,Deaths=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0488575143971763,0.992452830188679,1.96194402677402,263
+"{Faction=Horde,Deaths=Below average,Healing_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.120007430800669,0.992319508448541,1.96168046785843,646
+"{Faction=Horde,Deaths=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0473713542634219,0.992217898832685,1.96147959949186,255
+"{Faction=Horde,Damage_done=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0445848040126324,0.991735537190083,1.96052603624466,240
+"{Faction=Horde,Deaths=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.132639791937581,0.991666666666667,1.96038988860326,714
+"{Faction=Horde,Healing_done=Above average,Honor=Above average,Role=heal} => {Result=Win}",0.0434701839123166,0.991525423728814,1.96011067055902,234
+"{Faction=Horde,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.150845253576073,0.991452991452991,1.95996748181838,812
+"{Faction=Horde,Deaths=Below average,Honor=Above average} => {Result=Win}",0.171465725431915,0.99140708915145,1.95987673922228,923
+"{Faction=Horde,Killing_blows=Above average,Honor=Above average} => {Result=Win}",0.100315809028423,0.990825688073395,1.95872738850499,540
+"{Faction=Horde,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.0997584989782649,0.990774907749078,1.95862700272247,537
+"{Faction=Horde,Healing_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.153074493776704,0.990384615384615,1.95785544789401,824
+"{Faction=Horde,Character_class=Melee,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0176481515883336,0.989583333333333,1.95627142245073,95
+"{Faction=Horde,Honorable_kills=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0176481515883336,0.989583333333333,1.95627142245073,95
+"{Faction=Horde,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.157347204161248,0.989485981308411,1.95607897076136,847
+"{Faction=Horde,Honor=Above average,Role=heal} => {Result=Win}",0.0477428942968605,0.988461538461539,1.95405378683014,257
+"{Faction=Horde,Deaths=Above average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.0157904514211406,0.988372093023256,1.95387696538531,85
+"{Faction=Horde,Honor=Above average} => {Result=Win}",0.220509009845811,0.98834304746045,1.953819546265,1187
+"{Killing_blows=Above average,Honorable_kills=Below average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0124465911201932,0.985294117647059,1.94779222743082,67
+"{Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0228497120564741,0.984,1.94523393316195,123
+"{Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.052387144714843,0.982578397212544,1.94242361813996,282
+"{Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0516440646479658,0.982332155477032,1.9419368317785,278
+"{Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0206204718558425,0.982300884955752,1.94187501421844,111
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0391974735277726,0.981395348837209,1.94008489268847,211
+"{Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0195058517555267,0.981308411214953,1.93991302885424,105
+"{Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0189485417053688,0.980769230769231,1.93884714257465,102
+"{Character_class=Versatile,Deaths=Below average,Honorable_kills=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.00910273081924577,0.98,1.9373264781491,49
+"{Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0362251532602638,0.979899497487437,1.93712779837491,195
+"{Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0354820731933866,0.979487179487179,1.9363127018654,191
+"{Character_class=Melee,Killing_blows=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0256362623072636,0.978723404255319,1.93480282229393,138
+"{Character_class=Versatile,Killing_blows=Above average,Deaths=Below average,Honor=Above average} => {Result=Win}",0.0167193015047371,0.978260869565217,1.93388845423047,90
+"{Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.00835965075236857,0.978260869565217,1.93388845423047,45
+"{Character_class=Melee,Deaths=Below average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0549879249489132,0.976897689768977,1.93119363350217,296
+"{Character_class=Melee,Deaths=Below average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0548021549321939,0.97682119205298,1.93104240794021,295
+"{Character_class=Versatile,Honorable_kills=Below average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.00780234070221066,0.976744186046512,1.93089017755724,42
+"{Killing_blows=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0429128738621586,0.974683544303797,1.92681656958771,231
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0709641463867732,0.974489795918367,1.92643355542731,382
+"{Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0336243730261936,0.973118279569892,1.92372225447107,181
+"{Character_class=Melee,Killing_blows=Above average,Deaths=Above average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.00668772060189485,0.972972972972973,1.92343500312652,36
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.079509567155861,0.972727272727273,1.92294928721664,428
+"{Character_class=Melee,Killing_blows=Above average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.0191343117220881,0.971698113207547,1.92091477906582,103
+"{Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.062232955600966,0.971014492753623,1.9195633545695,335
+"{Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0490432844138956,0.970588235294118,1.91872070164827,264
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.0906557681590191,0.970178926441352,1.91791155381337,488
+"{Character_class=Melee,Deaths=Below average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0713356864202118,0.96969696969697,1.91695879099478,384
+"{Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Honor=Above average} => {Result=Win}",0.0694779862530188,0.968911917098446,1.91540684896839,374
+"{Character_class=Versatile,Honorable_kills=Below average,Healing_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0115177410365967,0.96875,1.91508676092545,62
+"{Character_class=Melee,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.068363366152703,0.968421052631579,1.9144364767961,368
+"{Character_class=Melee,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0681775961359836,0.968337730870712,1.91427176102719,367
+"{Healing_done=Below average,Honor=Above average,Role=heal} => {Result=Win}",0.00557310050157904,0.967741935483871,1.91309395472261,30
+"{Deaths=Below average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0988296488946684,0.967272727272727,1.91216639401729,532
+"{Character_class=Versatile,Deaths=Below average,Honorable_kills=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0107746609697195,0.966666666666667,1.91096829477292,58
+"{Character_class=Melee,Killing_blows=Below average,Deaths=Above average,Honorable_kills=Below average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.00538733048485974,0.966666666666667,1.91096829477292,29
+"{Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.101987739178897,0.966549295774648,1.91073626851081,549
+"{Deaths=Below average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.101430429128739,0.966371681415929,1.91038514912301,546
+"{Character_class=Melee,Deaths=Below average,Healing_done=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0105888909530002,0.966101694915254,1.90985142259597,57
+"{Killing_blows=Above average,Deaths=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.122793981051458,0.964963503649635,1.90760137353874,661
+"{Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.147501393275125,0.964763061968408,1.90720512764449,794
+"{Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0343674530930708,0.963541666666667,1.90479059554413,185
+"{Character_class=Versatile,Deaths=Below average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.0195058517555267,0.963302752293578,1.90431829437985,105
+"{Character_class=Melee,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.087497677874791,0.96319018404908,1.90409576229754,471
+"{Faction=Horde,Character_class=Ranged,Deaths=Below average,Honorable_kills=Above average,Role=heal} => {Result=Win}",0.00966004086940368,0.962962962962963,1.90364657716843,52
+"{Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0483002043470184,0.962962962962963,1.90364657716843,260
+"{Character_class=Versatile,Deaths=Below average,Damage_done=Above average,Honor=Above average} => {Result=Win}",0.0191343117220881,0.962616822429907,1.90296230449511,103
+"{Character_class=Versatile,Honorable_kills=Below average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.00947427085268438,0.962264150943396,1.90226512101664,51
+"{Character_class=Versatile,Killing_blows=Below average,Honorable_kills=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.00947427085268438,0.962264150943396,1.90226512101664,51
+"{Character_class=Melee,Deaths=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.106631989596879,0.961474036850921,1.90070317310632,574
+"{Character_class=Melee,Deaths=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.115177410365967,0.961240310077519,1.90024112711983,620
+"{Honorable_kills=Above average,Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0687349061861416,0.961038961038961,1.89984308750376,370
+"{Deaths=Below average,Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.164220694779863,0.960869565217391,1.89950821504415,884
+"{Character_class=Versatile,Honorable_kills=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.013561211220509,0.960526315789474,1.89882965769179,73
+"{Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.067806056102545,0.960526315789474,1.89882965769179,365
+"{Character_class=Versatile,Deaths=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0315809028422813,0.96045197740113,1.8986827008264,170
+"{Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0947427085268438,0.96045197740113,1.8986827008264,510
+"{Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.11703511053316,0.960365853658537,1.89851244592137,630
+"{Killing_blows=Above average,Deaths=Below average,Honor=Above average} => {Result=Win}",0.138584432472599,0.96010296010296,1.8979927411804,746
+"{Faction=Horde,Character_class=Ranged,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Above average} => {Result=Win}",0.00891696080252647,0.96,1.89778920308483,48
+"{Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0310235927921234,0.959770114942529,1.89733475164731,167
+"{Character_class=Melee,Deaths=Below average,Honor=Above average} => {Result=Win}",0.131710941853985,0.959404600811908,1.8966121800112,709
+"{Character_class=Ranged,Killing_blows=Below average,Deaths=Below average,Damage_done=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0130039011703511,0.958904109589041,1.89562277705391,70
+"{Faction=Horde,Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0128181311536318,0.958333333333333,1.89449443016281,69
+"{Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.046814044213264,0.958174904942966,1.89418123882041,252
+"{Character_class=Melee,Honorable_kills=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.00835965075236857,0.957446808510638,1.8927418913745,45
+"{Character_class=Versatile,Honorable_kills=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.0124465911201932,0.957142857142857,1.89214102093279,67
+"{Character_class=Versatile,Deaths=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0328812929593164,0.956756756756757,1.89137775307441,177
+"{Deaths=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.216050529444548,0.955628594905505,1.88914753080291,1163
+"{Faction=Horde,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0239643321567899,0.955555555555556,1.88900314195944,129
+"{Deaths=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.207876648708898,0.954778156996587,1.88746633092642,1119
+"{Deaths=Below average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.162548764629389,0.954198473282443,1.8863203752036,875
+"{Deaths=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.23146944083225,0.95405819295559,1.88604306011015,1246
+"{Damage_done=Below average,Honor=Above average,Role=dps} => {Result=Win}",0.125952071335686,0.953586497890295,1.885110583233,678
+"{Character_class=Melee,Killing_blows=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0226639420397548,0.953125,1.88419826478149,122
+"{Damage_done=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.127809771502879,0.952908587257618,1.88377044627534,688
+"{Killing_blows=Below average,Healing_done=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0111462010031581,0.952380952380952,1.88272738401273,60
+"{Character_class=Versatile,Honorable_kills=Below average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.0217350919561583,0.951219512195122,1.88043137500784,117
+"{Killing_blows=Above average,Honorable_kills=Below average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.028980122608211,0.951219512195122,1.88043137500784,156
+"{Faction=Horde,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.025264722273825,0.951048951048951,1.88009419886027,136
+"{Character_class=Versatile,Deaths=Below average,Honor=Above average} => {Result=Win}",0.0633475757012818,0.949860724233983,1.87774523633916,341
+"{Deaths=Below average,Honor=Above average} => {Result=Win}",0.296488946684005,0.949434860202261,1.87690336117105,1596
+"{Honorable_kills=Above average,Damage_done=Below average,Honor=Above average} => {Result=Win}",0.120378970834107,0.947368421052632,1.87281829251793,648
+"{Character_class=Versatile,Killing_blows=Below average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.023407022106632,0.947368421052632,1.87281829251793,126
+"{Character_class=Melee,Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0967861787107561,0.947272727272727,1.87262911895303,521
+"{Character_class=Melee,Killing_blows=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0834107375069664,0.947257383966245,1.87259878732659,449
+"{Character_class=Versatile,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.0263793423741408,0.946666666666667,1.87143101970865,142
+"{Character_class=Melee,Honorable_kills=Above average,Honor=Above average,Role=heal} => {Result=Win}",0.0130039011703511,0.945945945945946,1.87000625303967,70
+"{Character_class=Melee,Honor=Above average,Role=heal} => {Result=Win}",0.0193200817388074,0.945454545454545,1.86903482121991,104
+"{Damage_done=Below average,Honor=Above average} => {Result=Win}",0.20471855842467,0.945111492281304,1.8683566518363,1102
+"{Character_class=Versatile,Killing_blows=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0221066319895969,0.944444444444444,1.86703798914596,119
+"{Character_class=Ranged,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0124465911201932,0.943661971830986,1.86549114739853,67
+"{Killing_blows=Above average,Honorable_kills=Below average,Honor=Above average} => {Result=Win}",0.0308378227754041,0.943181818181818,1.86454194905352,166
+"{Character_class=Ranged,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0122608211034739,0.942857142857143,1.8639001101726,66
+"{Character_class=Melee,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.123351291101616,0.941843971631206,1.86189720870025,664
+"{Killing_blows=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.159390674345161,0.941822173435785,1.86185411663784,858
+"{Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0360393832435445,0.941747572815534,1.8617066413757,194
+"{Deaths=Above average,Honorable_kills=Below average,Honor=Above average,Role=heal} => {Result=Win}",0.00594464053501765,0.941176470588235,1.86057765008317,32
+"{Faction=Horde,Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0265651123908601,0.940789473684211,1.859812609931,143
+"{Character_class=Melee,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.14620100315809,0.94026284348865,1.85877153378605,787
+"{Character_class=Melee,Killing_blows=Above average,Honor=Above average} => {Result=Win}",0.0956715586104403,0.93978102189781,1.8578190381476,515
+"{Character_class=Versatile,Killing_blows=Above average,Honor=Above average} => {Result=Win}",0.0228497120564741,0.938931297709924,1.85613924920034,123
+"{Killing_blows=Below average,Deaths=Above average,Honorable_kills=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.00854542076908787,0.938775510204082,1.85583127852683,46
+"{Honorable_kills=Above average,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.196358907672302,0.938721136767318,1.85572378965056,1057
+"{Character_class=Melee,Honor=Above average} => {Result=Win}",0.181125766301319,0.938402309913378,1.85509351239945,975
+"{Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0365966932937024,0.938095238095238,1.85448647325254,197
+"{Killing_blows=Below average,Honorable_kills=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0278655025078952,0.9375,1.85330976863753,150
+"{Character_class=Versatile,Healing_done=Below average,Honor=Above average} => {Result=Win}",0.0443990339959131,0.937254901960784,1.85282524320782,239
+"{Faction=Horde,Character_class=Versatile,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0109604309864388,0.936507936507937,1.85134859427919,59
+"{Killing_blows=Below average,Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.0711499164034925,0.936430317848411,1.8511951527646,383
+"{Honorable_kills=Below average,Honor=Above average,Role=heal} => {Result=Win}",0.0273081924577373,0.936305732484076,1.85094886447366,147
+"{Character_class=Versatile,Honor=Above average,Role=dps} => {Result=Win}",0.0436559539290359,0.936254980079681,1.85084853388503,235
+"{Faction=Horde,Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.027122422441018,0.935897435897436,1.85014171775097,146
+"{Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0377113133940182,0.935483870967742,1.84932415623186,203
+"{Healing_done=Below average,Honor=Above average} => {Result=Win}",0.287571985881479,0.934218467109234,1.8468226252108,1548
+"{Character_class=Versatile,Honor=Above average} => {Result=Win}",0.0858257477243173,0.933333333333333,1.84507283633248,462
+"{Killing_blows=Below average,Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.123165521084897,0.932489451476793,1.84340459687829,663
+"{Honor=Above average,Role=heal} => {Result=Win}",0.0806241872561769,0.931330472103004,1.84111345256352,434
+"{Killing_blows=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0850826676574401,0.930894308943089,1.8402512174222,458
+"{Honorable_kills=Below average,Healing_done=Above average,Honor=Above average} => {Result=Win}",0.0297232026750882,0.930232558139535,1.83894302624499,160
+"{Killing_blows=Above average,Honor=Above average} => {Result=Win}",0.184283856585547,0.92970946579194,1.83790894394345,992
+"{Honorable_kills=Above average,Honor=Above average,Role=dps} => {Result=Win}",0.2232955600966,0.929621036349575,1.83773413098412,1202
+"{Honorable_kills=Above average,Honor=Above average} => {Result=Win}",0.27661155489504,0.929463171036205,1.83742205276823,1489
+"{Honor=Above average} => {Result=Win}",0.397547835779305,0.928416485900217,1.83535289886187,2140
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.00705926063533346,0.926829268292683,1.83221518590507,38
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0503436745309307,0.924914675767918,1.82843029734069,271
+"{Faction=Horde,Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0204347018391232,0.92436974789916,1.82735304918883,110
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0200631618056846,0.923076923076923,1.82479731065849,108
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Healing_done=Above average} => {Result=Win}",0.00873119078580717,0.92156862745098,1.82181561570644,47
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0501579045142114,0.921501706484642,1.82168332207375,270
+"{Faction=Horde,Character_class=Ranged,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0256362623072636,0.92,1.8187146529563,138
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Above average,Healing_done=Below average} => {Result=Win}",0.00631618056845625,0.918918918918919,1.81657750295282,34
+"{Faction=Horde,Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Damage_done=Below average} => {Result=Win}",0.0208062418725618,0.918032786885246,1.81482574065489,112
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0183912316552108,0.916666666666667,1.81212510711225,99
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Above average} => {Result=Win}",0.00594464053501765,0.914285714285714,1.80741828865222,32
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0380828534274568,0.911111111111111,1.80114253070551,205
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0391974735277726,0.90948275862069,1.79792349968974,211
+"{Faction=Horde,Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0347389931265094,0.907766990291262,1.79453165947039,187
+"{Faction=Horde,Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.054244844882036,0.906832298136646,1.79268390042951,292
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0848968976407208,0.906746031746032,1.79251336352879,457
+"{Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Healing_done=Above average,Role=dps} => {Result=Win}",0.00538733048485974,0.90625,1.79153277634961,29
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0104031209362809,0.903225806451613,1.78555435774111,56
+"{Faction=Horde,Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0276797324911759,0.903030303030303,1.78516787411389,149
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.017276611554895,0.902912621359223,1.78493523348391,93
+"{Faction=Horde,Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.028980122608211,0.901734104046243,1.78260546532535,156
+"{Faction=Horde,Killing_blows=Above average,Deaths=Below average,Damage_done=Below average} => {Result=Win}",0.0382686234441761,0.899563318777293,1.77831411861115,206
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0232212520899127,0.899280575539568,1.77775517375303,125
+"{Faction=Horde,Character_class=Versatile,Killing_blows=Above average,Deaths=Below average,Healing_done=Below average} => {Result=Win}",0.0131896711870704,0.89873417721519,1.77667501871075,71
+"{Character_class=Versatile,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0178339216050529,0.897196261682243,1.77363476923816,96
+"{Faction=Horde,Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0611183355006502,0.896457765667575,1.77217486323487,329
+"{Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0722645365038083,0.896313364055299,1.77188940092166,389
+"{Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0731933865874048,0.895454545454546,1.77019163355924,394
+"{Faction=Horde,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0395690135612112,0.894957983193277,1.76920999762373,213
+"{Faction=Horde,Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0315809028422813,0.894736842105263,1.76877283182249,170
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.116106260449563,0.894134477825465,1.76758203971152,625
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0169050715214564,0.892156862745098,1.76367256414134,91
+"{Faction=Horde,Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0321382128924392,0.891752577319588,1.76287334693769,173
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0274939624744566,0.891566265060241,1.76250503298541,148
+"{Faction=Horde,Character_class=Versatile,Killing_blows=Above average,Deaths=Below average} => {Result=Win}",0.013561211220509,0.890243902439024,1.75989090225093,73
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average,Role=heal} => {Result=Win}",0.0356678432101059,0.888888888888889,1.75721222507855,192
+"{Faction=Horde,Character_class=Melee,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0687349061861416,0.887290167865707,1.75405177143632,370
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.017276611554895,0.885714285714286,1.75093646713184,93
+"{Character_class=Ranged,Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0143042912873862,0.885057471264368,1.74963803445321,77
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0356678432101059,0.884792626728111,1.74911447288925,192
+"{Faction=Horde,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0754226267880364,0.884531590413943,1.7485984396615,406
+"{Character_class=Ranged,Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0141185212706669,0.883720930232558,1.74699587493274,76
+"{Faction=Horde,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.164406464796582,0.883233532934132,1.74603235688007,885
+"{Character_class=Ranged,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Above average,Healing_done=Below average} => {Result=Win}",0.0109604309864388,0.880597014925373,1.74082031999386,59
+"{Character_class=Ranged,Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0150473713542634,0.880434782608696,1.74049960880742,81
+"{Faction=Horde,Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Healing_done=Below average} => {Result=Win}",0.0483002043470184,0.875420875420875,1.73058779742584,260
+"{Faction=Horde,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0620471855842467,0.87434554973822,1.7284620250609,334
+"{Faction=Horde,Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0404978636448077,0.872,1.72382519280206,218
+"{Faction=Horde,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0616756455508081,0.871391076115486,1.72262143324629,332
+"{Faction=Horde,Character_class=Ranged,Honorable_kills=Above average,Role=heal} => {Result=Win}",0.0100315809028423,0.870967741935484,1.72178455925035,54
+"{Character_class=Versatile,Killing_blows=Above average,Deaths=Below average,Damage_done=Below average} => {Result=Win}",0.00501579045142114,0.870967741935484,1.72178455925035,27
+"{Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0429128738621586,0.868421052631579,1.71675010147477,231
+"{Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0291658926249303,0.867403314917127,1.71473817267679,157
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0278655025078952,0.867052023121387,1.71404371665899,150
+"{Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0434701839123166,0.866666666666667,1.71328191945159,234
+"{Killing_blows=Above average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0445848040126324,0.866425992779783,1.71280613996826,240
+"{Faction=Horde,Character_class=Versatile,Killing_blows=Above average,Honorable_kills=Above average} => {Result=Win}",0.0143042912873862,0.865168539325843,1.71032032581381,77
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0527586847482816,0.86322188449848,1.70647205444558,284
+"{Faction=Horde,Character_class=Ranged,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Above average} => {Result=Win}",0.00928850083596507,0.862068965517241,1.70419289070118,50
+"{Faction=Horde,Killing_blows=Above average,Deaths=Below average,Healing_done=Below average} => {Result=Win}",0.0993869589448263,0.861513687600644,1.7030951819149,535
+"{Character_class=Melee,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0265651123908601,0.86144578313253,1.7029609440332,143
+"{Faction=Horde,Character_class=Melee,Killing_blows=Above average,Deaths=Below average} => {Result=Win}",0.0538733048485974,0.86053412462908,1.70115871938242,290
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0882407579416682,0.860507246376812,1.70110558473976,475
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0247074122236671,0.858064516129032,1.69627663985405,133
+"{Character_class=Versatile,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0267508824075794,0.857142857142857,1.69445464561146,144
+"{Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0300947427085268,0.852631578947368,1.68553646326613,162
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0986438788779491,0.852327447833066,1.68493523749005,531
+"{Faction=Horde,Killing_blows=Above average,Deaths=Below average} => {Result=Win}",0.112390860115177,0.852112676056338,1.68451066294942,605
+"{Faction=Horde,Character_class=Ranged,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0299089726918075,0.851851851851852,1.68399504903361,161
+"{Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Damage_done=Below average} => {Result=Win}",0.0308378227754041,0.851282051282051,1.68286863094061,166
+"{Faction=Horde,Character_class=Melee,Killing_blows=Below average,Honorable_kills=Above average} => {Result=Win}",0.0360393832435445,0.850877192982456,1.68206828124295,194
+"{Character_class=Ranged,Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0380828534274568,0.850622406639004,1.68156460335577,205
+"{Killing_blows=Above average,Deaths=Below average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0518298346646851,0.850609756097561,1.68153959495893,279
+"{Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.125394761285529,0.847989949748744,1.67636059474752,675
+"{Killing_blows=Above average,Deaths=Below average,Damage_done=Below average} => {Result=Win}",0.0538733048485974,0.847953216374269,1.67628797787098,290
+"{Deaths=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.185212706669144,0.847068819031436,1.6745396448205,997
+"{Deaths=Below average,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.126509381385844,0.847014925373134,1.67443310440087,681
+"{Character_class=Melee,Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.0698495262864574,0.846846846846847,1.67410083605456,376
+"{Faction=Horde,Character_class=Versatile,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0235927921233513,0.846666666666667,1.67374464438732,127
+"{Faction=Horde,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.104031209362809,0.842105263157895,1.66472737112705,560
+"{Character_class=Versatile,Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0274939624744566,0.840909090909091,1.66236270156579,148
+"{Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0497863644807728,0.84012539184953,1.66081343530151,268
+"{Character_class=Ranged,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Above average,Role=dps} => {Result=Win}",0.011703511053316,0.84,1.66056555269923,63
+"{Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0484859743637377,0.839228295819936,1.65903999867746,261
+"{Character_class=Melee,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.112205090098458,0.838888888888889,1.65836903741788,604
+"{Character_class=Ranged,Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Damage_done=Above average} => {Result=Win}",0.0124465911201932,0.8375,1.6556233933162,67
+"{Faction=Horde,Character_class=Melee,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0718929964703697,0.83585313174946,1.65236775916539,387
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Healing_done=Above average,Role=heal} => {Result=Win}",0.0273081924577373,0.835227272727273,1.6511305211498,147
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Damage_done=Below average,Healing_done=Above average} => {Result=Win}",0.027122422441018,0.834285714285714,1.64926918839515,146
+"{Killing_blows=Below average,Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0631618056845625,0.833333333333333,1.64738646101114,340
+"{Killing_blows=Above average,Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.143228682890581,0.832613390928726,1.64596323296707,771
+"{Deaths=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.20490432844139,0.832452830188679,1.64564582625988,1103
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.0533159947984395,0.831884057971015,1.64452144107895,287
+"{Faction=Horde,Honorable_kills=Above average,Healing_done=Below average} => {Result=Win}",0.14898755340888,0.825102880658436,1.6311159774456,802
+"{Faction=Horde,Character_class=Versatile,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0235927921233513,0.824675324675325,1.63027075752011,127
+"{Deaths=Below average,Honorable_kills=Above average} => {Result=Win}",0.259520713356864,0.823217442545669,1.62738872318154,1397
+"{Honorable_kills=Above average,Damage_done=Below average,Role=dps} => {Result=Win}",0.0938138584432473,0.821138211382114,1.62327836645976,505
+"{Faction=Horde,Killing_blows=Above average,Damage_done=Below average} => {Result=Win}",0.0434701839123166,0.821052631578947,1.62310918684887,234
+"{Faction=Horde,Character_class=Melee,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0832249674902471,0.82051282051282,1.62204205391866,448
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.0568456251161063,0.820375335120643,1.62177026403027,306
+"{Faction=Horde,Character_class=Versatile,Killing_blows=Below average,Deaths=Below average,Healing_done=Above average} => {Result=Win}",0.0278655025078952,0.819672131147541,1.62038012558473,150
+"{Honorable_kills=Above average,Damage_done=Below average,Healing_done=Below average} => {Result=Win}",0.0926992383429315,0.819376026272578,1.61979476659026,499
+"{Faction=Horde,Character_class=Melee,Honorable_kills=Above average} => {Result=Win}",0.0915846182426156,0.818936877076412,1.61892662846211,493
+"{Character_class=Versatile,Killing_blows=Above average,Deaths=Below average} => {Result=Win}",0.0208062418725618,0.817518248175182,1.61612219240801,112
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Healing_done=Above average} => {Result=Win}",0.0282370425413338,0.817204301075269,1.61550156176576,152
+"{Faction=Horde,Character_class=Ranged,Killing_blows=Below average,Honorable_kills=Above average,Healing_done=Above average} => {Result=Win}",0.00984581088612298,0.815384615384615,1.61190429108167,53
+"{Faction=Horde,Killing_blows=Below average,Honorable_kills=Above average} => {Result=Win}",0.0988296488946684,0.812213740458015,1.6056359033733,532
+"{Character_class=Melee,Honorable_kills=Above average,Damage_done=Below average} => {Result=Win}",0.0657625859186327,0.810068649885583,1.6013953515733,354
+"{Faction=Horde,Honorable_kills=Above average,Role=dps} => {Result=Win}",0.169050715214564,0.808888888888889,1.59906312482148,910
+"{Faction=Horde,Honorable_kills=Above average} => {Result=Win}",0.212335129110162,0.808345120226308,1.59798816826229,1143
+"{Faction=Horde,Character_class=Versatile,Deaths=Below average,Damage_done=Above average,Healing_done=Below average} => {Result=Win}",0.0130039011703511,0.804597701149425,1.5905800313211,70
