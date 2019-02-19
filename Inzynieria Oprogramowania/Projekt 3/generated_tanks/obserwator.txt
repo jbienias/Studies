@@ -1,0 +1,50 @@
+function (e) { 
+var response = {}; 
+myTank = e.data.myTank; 
+enemyTank = e.data.enemyTank; 
+var bullet0 = {};
+ if(enemyTank.bullets[0]) {
+	bullet0.x = enemyTank.bullets[0].x;
+	bullet0.y = enemyTank.bullets[0].y;
+ } else {
+	bullet0.x = 0;
+	bullet0.y = 0;
+ } var bullet1 = {};
+if(enemyTank.bullets[1]) {
+	bullet1.x = enemyTank.bullets[1].x;
+	bullet1.y = enemyTank.bullets[1].y;
+ } else {
+	bullet1.x = 0;
+	bullet1.y = 0;
+ }var input = [myTank.x, myTank.y, myTank.rotation, myTank.shootCooldown, enemyTank.x, enemyTank.y, enemyTank.cannonRotation, bullet0.x, bullet0.y, bullet1.x, bullet1.y]; 
+var weights1 = []; 
+var bias1 = []; 
+var hidden = [0, 0, 0, 0]; 
+var i, j; 
+for (i = 0; i < 4; i++) { 
+for (j = 0; j < 11; j++) 
+hidden[i] += input[j] * weights1[i * 11 + j]; 
+
+hidden[i] = hidden[i] + bias1[i]; 
+hidden[i] = 1 / (1 + Math.pow(Math.E, -hidden[i])); 
+} 
+var weights2 = []; 
+var bias2 = []; 
+var output = [0, 0, 0, 0, 0, 0, 0]; 
+for (i = 0; i < 7; i++) { 
+for (j = 0; j < 4; j++) 
+output[i] += hidden[j] * weights2[i * 4 + j]; 
+
+output[i] = output[i] + bias2[i]; 
+output[i] = 1 / (1 + Math.pow(Math.E, -output[i])); 
+output[i] = Math.round(output[i]); 
+} 
+response.turnLeft = output[0]; 
+response.turnRight = output[1]; 
+response.goForward = output[2]; 
+response.goBack = output[3]; 
+response.shoot = output[4]; 
+response.cannonLeft = output[5]; 
+response.cannonRight = output[6]; 
+self.postMessage(response); 
+} 
