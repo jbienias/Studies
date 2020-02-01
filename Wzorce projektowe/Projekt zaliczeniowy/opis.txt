@@ -1,0 +1,36 @@
+Glowny model:
+Gun, ktory dziedziczy po AbstractGun, prosta klasa z properties z metodami:
+- Value() (uzyta w Dekoratorze)
+- Accept() (uzyta w Odwiedzającym)
+
+Builder (fluent):
+- Abstract Builder : GunBuilder.cs
+- Concrete Builders : AK47Builder, M1911Builder, M870Builder, MP5Builder
+- Builder Director : GunFactory.cs (który w sumie jest Singletonem tak o :P)
+
+Prototype (shallow clone):
+- interfejs generyczny IPrototype<T> z metodą Clone
+- Gun - glowny model implementuje IPrototype<T> i nadpisuje Clone wywolujac na sobie MemberwiseClone
+
+Dekorator:
+- Attachment.cs - klasa abstrakcyjna dekoratora, która dziedziczy po AbstractGun,
+Nadpisuje Value() - kazdy attachment zwieksza wartosc broni
+Nadpisuje ToString() - dodaje stringa z dodanym attachmentem
+- Concrete Decorators: HoloSight, LaserSight, Silencer - wszystkie dziedzicza po Attachment (abstrakcyjny dekorator)
+
+Iterator:
+- interfejs iteratora (generyczny) IIterator<T> z metodami typowego iteratora aby przemieszczac sie po strukturze
+- Aggregate interface generyczny ICollection<T> - interfejs zlecajacy utworzenie IIteratora o typie T w klasie
+- Store zawiera listę wszystkich broni + metody dodawania, usuwania i wyszukiwania oraz pozwala na stworzenie iteratora (Store implementuje ICollection<Gun>)
+- StoreIterator implementuje IIterator<Gun> - operuje na liście _guns z Store 
+
+Fasada:
+- Fasada GunShop.cs - klasa "scalająca" kilka podsystemów systemu - w tym przypadku Store oraz StoreIterator - swojego rodzaju "duża klasa" wystawiająca uproszczony (i być może okrojony) interfejs (dla np. userów)
+- przy uzyciu Store i StoreIterator metody pozwalajace na przegladanie asortymentu, kupowanie broni oraz modyfikowania broni (kupowania attachmentow do broni)
+
+Wizytator/Odwiedzający:
+- interfejs IVisitor z metodą Visit, pobierająca jako argument IElement
+- interfejs IElement zawiera metodę Accept, która jako argument przyjmuje IVisitor
+- AbstractGun.cs implementuje IElement, a co za tym idzie nadpisujemy metodę Accept, która po przyjęciu Visitora wywołuje na sobie operację Visit z Visitora
+- Store.cs (czyli nasz asortyment) dostaje metodę Accept, która przyjmuje Visitora i wywołuję na wszystkich elementach na liście _guns metodę Visit Visitora
+- ConcreteVisitors : BargainPriceVisitor obniżajacy cene wszystkich produktow i IncreasePriceVisitor ktory zwiększa cene
