@@ -1,0 +1,28 @@
+ALGORYTM: REZOLUCJA
+
+Używając rezolucję proszę pokazać, że 
+A ≡ (∀x∃y p(x,y) ∧ ∀y∃z q(y,z)) → ∀x∃y∃z (p(x,y) ∧ q(y,z)) jest tautologią. 
+
+rozpatrujemy ~A :
+~[(∀x∃y p(x,y) ∧ ∀y∃z q(y,z)) → ∀x∃y∃z (p(x,y) ∧ q(y,z))]
+~[~(∀x∃y p(x,y) ∧ ∀y∃z q(y,z)) ∨ ∀x∃y∃z (p(x,y) ∧ q(y,z))]
+~~(∀x∃y p(x,y) ∧ ∀y∃z q(y,z)) ∧ ~∀x∃y∃z (p(x,y) ∧ q(y,z))
+(∀x∃y p(x,y) ∧ ∀y∃z q(y,z)) ∧ ∃x∀y∀z ~(p(x,y) ∧ q(y,z))
+(∀x∃y p(x,y) ∧ ∀y∃z q(y,z)) ∧ ∃x∀y∀z (~p(x,y) ∨ ~q(y,z))
+(∀x∃y p(x,y) ∧ ∀l∃z q(l,z)) ∧ ∃k∀m∀o (~p(k,m) ∨ ~q(m,o))
+
+i teraz wydaje mi sie ze skoro E jest przed ∀m∀o to moznaby chyba zmienic k na jakies konkretne a, bo
+k nie bylo zalezne od m i o - moge sie mylic
+
+moze byc tez tak ze k zamieni sie na funkcje zalezna zarowno od m i o
+
+(∀x p(x,f(x)) ∧ ∀l q(l,g(l))) ∧ ∀m∀o (~p('a',m) ∨ ~q(m,o))
+∀x p(x,f(x)) ∧ ∀l q(l,g(l)) ∧ ∀m∀o (~p('a',m) ∨ ~q(m,o))
+
+oczywiscie tutaj "w tle" wykonywana jest unifikacja termów:
+
+p		~p ∨ ~q
+----------------
+	~q       q
+	-----------
+	     []

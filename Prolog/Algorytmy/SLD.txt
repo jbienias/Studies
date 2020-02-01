@@ -1,0 +1,2 @@
+- Prolog wybiera pierwszą klauzulę "z góry"
+- Prolog wybierze pierwszy cel z lewej

@@ -1,0 +1,37 @@
+ALGORYTM: REZOLUCJA
+Używając rezolucję proszę sprawdzić czy następujące konsekwencje logiczne są poprawne.
+
+a) (p → q) → r |= p → (q → r)
+
+b) p → (q → r) |= (p → q) → r 
+
+a)
+
+((p → q) → r) ∧ ¬(p → (q → r)) 
+((¬ p ∨ q) → r) ∧ (p ∧ ¬(q → r))
+(¬(p ∨ q) ∨ r) ∧ (p ∧ q ∧ ¬r)
+((¬p ∧ ¬q) ∨ r) ∧ (p ∧ q ∧ ¬r)
+(¬p ∨ r) ∧ (¬q ∨ r) ∧ p ∧ q ∧ ¬r
+
+~q ∨ r        ~r
+-----------------
+		~q     q
+		---------
+			[]
+
+b)
+
+(p → (q → r)) ∧ ¬((p → q) → r) 
+(¬ p ∨ (¬q ∨ r)) ∧ ¬(¬(¬p ∨ q) ∨ r)
+(¬ p ∨ (¬q ∨ r)) ∧ ((¬p ∨ q) ∧ ¬r)
+(¬ p ∨ ¬q ∨ r) ∧ (¬p ∨ q) ∧ ¬r
+
+¬p ∨ ¬q ∨ r			¬r
+-------------------------------
+	¬p ∨ ¬q				¬p ∨ q        
+   -------------------------------------
+				¬p
+	
+
+
+

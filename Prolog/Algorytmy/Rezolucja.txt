@@ -1,0 +1,98 @@
+REZOLUCJA :
+
+przykład: (¬p∨q) ∧ p ∧ (¬q)
+
+¬p∨q       ¬q
+-----------------
+      ¬p         p
+	-----------------
+	        ◻ -> logicznie poprawne (jesli cos innego niz kwadracik - zacięcie - nie poprawne)
+
+przykład: (p → q) → r |= p → (q → r)
+			  M			    g
+	
+M |= g ↔ M ∨ ¬g  ----> negujemy p → (q → r) ----> ¬(p → (q → r))
+zatem zapisujemy:
+
+((p → q) → r) ∧ ¬(p → (q → r)) 
+
+i za pomocą praw de morgana sprowadzamy do postaci koniunkja dysjunkcji : 
+(x1 ∨ ... ∨ xn) ∧ (y1 ∨ ... ∨ yn) ∧ ...
+
+prawa:
+
+I Prawo De Morgana
+~(p ∧ q) <---> (~p ∨ ~q)
+
+II Prawo De Morgana
+~(p ∨ q) <---> (~p ∧ ~q)
+
+p ∨ q <---> ~(~p ∧ ~q)
+
+Prawo podwójnej negacji
+~(~p) ⇔ p
+
+Prawo logiczne przemienność alternatywy:
+p ∨ q ⇔ q ∨ p
+
+Prawo logiczne przemienność koniunkcji:
+p ∧ q ⇔ q ∧ p
+
+Prawo logiczne łączności alternatywy:
+(p ∨ q) ∨ r ⇔ p ∨ (q ∨ r)
+
+Prawo łączności koniunkcji:
+(p ∧ q) ∧ r ⇔ p ∧ (q ∧ r)
+
+Prawo rozdzielności alternatywy względem koniunkcji:
+p ∨ (q ∧ r) ⇔ (p ∨ q) ∧ (p ∨ r)
+
+Prawo rozdzielności koniunkcji względem alternatywy:
+p ∧ (q ∨ r) ⇔ (p ∧ q) ∨ (p ∧ r)
+
+Prawo przechodniości implikacji:
+[(p ⇒ q) ∧ (q ⇒ r)] ⇒ (p ⇒ r)
+
+Prawo wyłączonego środka:
+p ∨ ~p – prawo to mówi, że zawsze prawdziwe jest albo zdanie logiczne, albo jego zaprzeczenie.
+
+Prawo zaprzeczenia implikacji:
+~(p ⇒ q) ⇔ p ∧ ~q
+
+Prawo zastąpienia równoważności implikacją:
+(p ⇔ q) ⇔ [(p ⇒ q) ∧ (q ⇒ p)]
+
+Prawo kontrapozycji:
+(p ⇒ q) ⇔ (~q ⇒ ~p)
+
+Prawo odrywania:
+[(p ⇒ q) ∧ p] ⇒ q
+
+Prawo eliminacji implikacji:
+(p ⇒ q) ⇔(~p) ∨ q 
+
+REZOLUCJA Z KWANTYFIKATORAMI :
+
+dodatkowo oprócz tego co powyżej korzystamy z algorytmu :
+1. eliminacja implikacji
+2. ¬ do predykatów
+3. ujednolicenie nazw zmiennych
+4. eliminacja kwantyfikatora szczegółówego/egzystencjalnego E (odwróćone) - Skolemizacja - np. Ey p(x,y) =skolemizacja= p(x, f(x))
+5. koniunkcja dysjunkcji
+
+oraz korzystamy z praw dla kwantyfikatorów
+~(∀x p(x)) <--> (Ex ~p(x))
+~(Ex p(x)) <--> (∀x ~p(x))
+
+przykład:
+∀x[ (∀y p(x,y)) -> ~∀y(q(x,y) -> r(x,y)) ]
+1. 
+∀x[ (~∀y p(x,y)) ∨ ~∀y(~q(x,y) ∨ r(x,y)) ]
+2.
+∀x[ (∃y ~p(x,y)) ∨ ∃y(q(x,y) ∧ ~r(x,y)) ]
+3.
+∀x[ (∃y ~p(x,y)) ∨ ∃z[q(x,z) ∧ ~r(x,z)] ]
+4.
+∀x[ ~p(x, f(x)) ∨ (q(x, g(x)) ∧ ~r(x, g(x))) ]
+5.
+∀x[ (~p(x, f(x)) ∨ q(x, g(x))) ∧ (~p(x,f(x)) ∨ ~r(x,g(x))) ]

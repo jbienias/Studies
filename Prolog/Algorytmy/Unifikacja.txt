@@ -1,0 +1,43 @@
+UNIFIKACJA:
+
+t1 = f(t1', t2', .... , tn')
+t2 = f(t1'', t2'', ...., 'tn'')
+
+ti' = ti'', i = 1...n
+
+Algorytm:
+Input: E = { u1 = v1, ...., un = vn }
+Output: mgu E (o ile istnieje)
+
+1. unify( {} ) = {}
+
+2. unify( E u { f(t1....tn) = g(t1'.....tn') } )
+     if f =/= g then 
+		ERROR (chyba chodzi o count zmiennych)
+	 else
+		unify(E u { ti = ti' | i = 1...n } )
+		
+3. unify( E u { x = t} ) = unify( E u { t = x} )
+	 if x "nalezy do" t
+		then ERROR
+	 else
+		unify(E[x/t]) U [x/t](część substytucji)
+		
+4. unify(E u {t = t}) = unify(E)
+
+Przykłady:
+a)
+f(x, g(a,b)), f(g(y,b), x)
+unify( { f(x, g(a,b)), f(g(y,b), x) } )
+unify( { x = g(y,b), g(a,b) = x } )
+unify( { g(a,b) = g(y,b) } ) U [x/g(a,b)]
+unify( { b = b } ) U [x/g(a,b), y/a]
+unify ( {} ) U [x/g(a,b), y/a]
+
+b)
+h(x), h(f(x))
+unify( { h(x), h(f(x)) } )
+unify( {x = f(x) } - 
+- rozwiązanie cykliczne - BŁĄD, bo gdyby [x/f(x)] to :
+h(f(x)) = h(f(f(x)))! 
+

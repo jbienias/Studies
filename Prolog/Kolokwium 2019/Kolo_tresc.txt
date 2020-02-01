@@ -1,0 +1,59 @@
+1.
+a) Proszę zdefiniować predykat delete(X, L1, L2), któy jest spełniony, jeżeli L2 jest listą L1 bez wszystkich wystąpień elementu X.
+
+b) Proszę zdefiniować predykat flatten(L1, L2), który jest spełniony, jeżeli L2 jest wersją spłaszczoną listy L1. Przykłady :
+
+?- flatten([[5],[1,2,3]], L)
+L = [5, 1, 2, 3]
+
+?- flatten([5,[1,[2,4],3]] L)
+L = [5, 1, 2, 4, 3]
+
+c) Proszę zdefiniować predykat neighbours(X, Y, L), który jest spełniony, jeżeli X i Y są sąsiadami w liście L. Przykłady :
+
+?- neighbours(1, 4, [2, 1, 4, 7])
+yes
+
+?- neighbours(1, 4, [2, 4, 1, 7])
+no
+
+2.
+a) Proszę zdefiniować predykat groundterm(T), który jest spełniony, jeżeli term T nie zawiera żadnych zmiennych
+
+b) Proszę zdefiniować predykat take_while(P, L1, L2), któy jest spełniony, jeżeli lista L2 jest początkiem listy L1, który spełnia predykat P. Przykład :
+
+pos(X) :- X > 0.
+neg(X) :- X < 0.
+
+?- take_while(pos, [1,2,0,5,-5,-6,8], L)
+L = [1,2]
+
+?- take_while(neg, [1,2,0,5,-5,-6,8], L)
+L = []
+
+3.
+Drzewo binarne D można reprezentować przez term nil - puste drzewo - albo term drzewo(X, L, R) z elementem X i poddrzewami L i R. Proszę zdefiniować następujące predykaty dla drzew.
+
+a) leaves(D, N), który jest spełniony, jeżeli N jest ilością liści drzewa D
+b) ordered(D), który jest spełniony, jeżeli drzewo D jest uporządkowane; dla wszystkich węzłów 'w' wartość lewego syna jest mniejsza niż wartość węzła 'w', a wartość prawego syna - większa.
+c) square(D1, D2), który jest spełniony, jeżeli drzewo D2 zawiera kwadraty elementów X drzewa D1.
+
+4.
+Proszę narysować drzewo SLD dla następujących programów i pytań. Jakie dpowiedzi daje Prolog?
+a)
+conc([],[]).
+conc([X|L1], [L2|X]) :- conc(L1, L2).
+
+?- conc([a,b], L).
+
+b)
+s(X, Y) :- q(X,Y).
+s(0,0).
+q(X,Y) :- i(X), !, j(Y).
+i(1).
+i(2).
+j(1).
+j(2).
+j(3).
+
+?- s(X,Y)

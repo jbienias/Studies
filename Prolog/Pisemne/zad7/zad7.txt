@@ -1,0 +1,8 @@
+Niech będą dane następująca defincja predykatu append.
+
+  append([X|L1], L2, [X|L3]) :- append(L1, L2, L3).
+  append([], L, L).   
+
+Proszę zilustrować, jak Prolog odpowiada na pytanie
+
+ ?- append(X, [3,4], [2,3,4]).

@@ -1,0 +1,39 @@
+Proszę obliczyć najbardziej ogólny unifikator dla następujących wyrażeń. 
+
+[x/y] <- za x podstaw y
+
+a) f(x,g(b))	f(a,y) 
+unify( { f(x,g(b)) = f(a,y) } ) =
+unify( { x = a, g(b) = y } ) = 
+unify( {} ) U [ a/x, y/g(b) ]
+
+b) f(h(x,b),y)	f(h(a,y),x) 
+unify( { f(h(x,b),y), f(h(a,y),x) } ) = 
+unify( { h(x,b) = h(a,y), y = x) } ) =
+unify( { x = a, b = y } ) U [x/y] =
+unify( { b = x } ) U [x/a, y/a] <- ERROR (błąd numer 2) //b = x (aktualizowane - za y podstawilismy x)
+
+c) f(x,y)	f(h(x,b),y) 
+unify( {f(x,y) = f(h(x,b), y) } ) =
+unify( {x = h(x,b), y = y} ) = 
+unify( {x = h(x,b) } ) <- ERROR (x należy do t / x jest argumentem h, błąd numer 3)
+
+d) g(x,h(x,y),h(y,h(x,y)))	g(x,y',h(z,y'))
+unify( { g(x,h(x,y),h(y,h(x,y))) = g(x,y',h(z,y')) } ) = 
+unify( { x = x, h(x,y) = y', h(y,h(x,y)) = h(z,y') } ) =
+unify( { y = z, y' = y' } ) U [y'/h(x,y)] //y' = y' (aktualizowane - za h(x,y) podstawilismy y')
+unify( {} ) U ([z/y, y'/h(x,y)])
+
+e) g(x,h(x,y),h(y,h(x,y)))	g(x,y',h(y',z)) 
+unify( { g(x,h(x,y),h(y,h(x,y))) = g(x,y',h(y',z)) } ) =
+unify( { x = x, h(x,y) = y', h(y,h(x,y)) = h(y',z) } ) = 
+unify( { h(y,h(x,y)) = h(y',z) } ) U [y'/h(x,y)] = 
+unify( { y = y', h(x,y) = z } ) U [y'/h(x,y)] =
+unify( { y = h(x,y), ... } ) U [y'/h(x,y)] <- ERROR (y należy do t / y jest argumentem h, błąd numer 3)
+
+f) f(a,x,h(g(y)))	f(z,h(z),h(z'))
+unify( { f(a,x,h(g(y)) = f(z,h(z),h(z')) } ) =
+unify( { a=z, x=h(z), h(g(y)) = h(z') } ) = 
+unify( { g(y) = z' } ) U [z/a, x/h(z) /ew. napisac x/h(a) jak chcemy aktualizowac] = 
+unify( {} ) U [z'/g(y), z/a, x/h(z)]
+

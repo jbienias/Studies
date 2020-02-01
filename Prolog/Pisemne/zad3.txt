@@ -1,0 +1,33 @@
+Niech będzie dany następujący program:
+
+	f(1,one).
+	f(s(1),two).
+	f(s(s(1)),three).
+	f(s(s(s(X))),N) :- f(X,N). 
+
+Jak odpowiada Prolog na pytanie
+a)  f(s(1),A)?
+b)  f(s(s(1)),two)?
+c)  f(s(s(s(s(s(s(1)))))),C)?
+d)  f(D,three)? 
+
+a)
+?- f(s(1), A)
+odp: A = two
+
+b)
+?- f(s(s(1)), two)
+odp: false (true jesli zamiast two napiszemy three)
+
+c)
+?- f(s(s(s(s(s(s(1)))))),C)
+odp: C = one (jest 6 s'ów, wywoła się dwa razy czwarty predykat - f(s(s(s(X))), N) :- f(X,N)
+
+d)
+?- f(D,three)
+odp : D = dowolna ilość s z koncówką s(s(1)), wyniki przykladowe :
+s(s(1))
+s(s(s(s(s(1)))))
+s(s(s(s(s(s(s(s(1))))))))
+s(s(s(s(s(s(s(s(s(s(s(1)))))))))))
+s(s(s(s(s(s(s(s(s(s(s(s(s(s(1))))))))))))))

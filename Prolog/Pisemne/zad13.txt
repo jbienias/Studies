@@ -1,0 +1,42 @@
+ALGORYTM: REZOLUCJA
+Niech będą
+
+A ≡ (p → (¬ q ∨ ¬ r)) ∧ ((p ∧ r) ∨ ( q → (q → r)))
+B ≡ (p ∧ (¬ q ∧ r)) ∨ (r ∧ (r → p))
+C ≡ (p ∧ r) ∨ (¬(q → r)).
+
+Używając rezolucję proszę sprawdzić czy {A,B}|= C jest ważna. 
+
+A)
+(p → (¬ q ∨ ¬ r)) ∧ ((p ∧ r) ∨ ( q → (q → r)))
+(¬p ∨ ¬ q ∨ ¬ r) ∧ ((p ∧ r) ∨ (¬q ∨ (¬q ∨ r)))
+(¬p ∨ ¬ q ∨ ¬ r) ∧ (p ∨ ¬q ∨ r) ∧ (r ∨ ¬q)
+
+B)
+(p ∧ (¬ q ∧ r)) ∨ (r ∧ (r → p))
+(p ∧ ¬ q ∧ r) ∨ (r ∧ (~r ∨ p))
+(p ∧ ¬ q ∧ r) ∨ ((r ∨ ~r)  ∧ (r ∨ p))
+(p ∨ r ∨ ~r) ∧ (p ∨ r) ∧ (~q ∨ r ∨ ~r) ∧ (~q ∨ p ∨ r) ∧ (r ∨ ~r) ∧  (r ∨ p)
+
+~C)
+~((p ∧ r) ∨ (~(q -> r)))
+~((p ∧ r) ∨ (~(~q ∨ r)))
+~(p ∧ r) ∧ (~q ∨ r)
+(~p ∨ ~r) ∧ (~q ∨ r)
+
+Nasz zbiór "k" : 
+(¬p ∨ ¬ q ∨ ¬ r) ∧ (p ∨ ¬q ∨ r) ∧ (r ∨ ¬q) //z A
+(p ∨ r ∨ ~r) ∧ (p ∨ r) ∧ (~q ∨ r ∨ ~r) ∧ (~q ∨ p ∨ r) ∧ (r ∨ ~r) ∧  (r ∨ p) //z B
+(~p ∨ ~r) ∧ (~q ∨ r) //z C
+
+Rozwiązanie:
+
+(~p ∨ ~r)	   (~q ∨ r)
+-----------------------
+	    ~p ∨ ~q       p ∨ r
+		--------------------
+			~q ∨ r      ~p ∨ ~q ∨ ~r
+			-------------------------
+				 ~p ∨ ~q       ~q ∨ p ∨ r
+				 -------------------------
+						 ~q ∨ r ---> nie są logicznie poprawne

@@ -1,0 +1,31 @@
+ALGORYTM: REZOLUCJA
+
+Niech będą 
+
+A ≡ (¬q → (p ∧ r))
+B ≡ r → (¬p ∧ ¬q)
+C ≡ (r ∨ w) → ¬(w → ¬q)
+
+Używając rezolucję proszę sprawdzić czy (A ∧ B) → C jest tautologią. 
+
+|= (A ∧ B) → C (tautologia)
+sprawdzamy ~[(A ∧ B) → C] czy nie można spełnić
+
+~[((~q -> (p ∧ r)) ∧ (r -> (~p ∧ ~q))) -> ((r ∨ w) → ¬(w → ¬q))]
+~[(~(q ∨ (p ∧ r)) ∧ (~r ∨ (~p ∧ ~q))) ∨ (~(r ∨ w) ∨ ~(~w ∨ ~q))]
+(q ∨ (p ∧ r)) ∧ (~r ∨ (~p ∧ ~q)) ∧ (r ∨ w) ∧ (~w ∧ ~q)
+(q ∨ p) ∧ (q ∨ r) ∧ (~p ∨ ~r) ∧ (~q ∨ ~r) ∧ (r ∨ w) ∧ (~w ∨ ~q)
+
+r ∨ w      ~w ∨ ~q
+------------------
+	~q ∨ r      q ∨ r
+	------------------
+		  r     ~p ∨ ~r
+		 ---------------
+		     ~p      p ∨ q
+			---------------
+				q        ~q ∨ ~r
+				------------------
+					~r        r
+					-------------
+					     [ ] 

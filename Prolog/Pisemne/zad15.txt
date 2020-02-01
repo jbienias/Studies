@@ -1,0 +1,39 @@
+ALGORYTM: REZOLUCJA
+
+A ≡ ∀x∀y∃z p(x,y,z)
+B ≡ ∀u∀v∀w∀x∀y∀z (p(x,y,u) ∧ p(y,z,v)) → (p(x,v,w) ↔ p(u,z,w))
+C ≡ ∃x [(∀y p(x,y,y)) ∧ (∀y∃z p(z,y,x))]
+
+Proszę transformować A, B oraz C do zbiorów klausuli
+
+A)
+∀x∀y∃z p(x,y,z)
+kroki 1,2,3,5 nie są potrzebne - wykonujemy krok 4 - skolemizację (usunięcie kwantyfikatora szczegółowego)
+
+krok 4:
+∀x∀y p(x,y,f(x,y))
+
+B) 
+∀u∀v∀w∀x∀y∀z (p(x,y,u) ∧ p(y,z,v)) → (p(x,v,w) ↔ p(u,z,w))
+widzimy, że kroki 2,3,4 nie będą potrzebne - zatem nie zapisujmy kwantyfikatorów (powodują chaos), gdyż są same kwantyfikatory ogólne + nazwy zmiennych są ujednolicone
++ negacje nie są przy znakach kwantyfikatorów
+
+krok 1: 
+~(p(x,y,u) ∧ p(y,z,v)) ∨ (p(x,v,w) -> p(u,z,w) ∧ p(u,z,w) -> p(x,v,w))
+(~p(x,y,u) ∨ ~p(y,z,v)) ∨ (~p(x,v,w) ∨ p(u,z,w) ∧ ~p(u,z,w) ∨ p(x,v,w))
+
+krok 5:
+[~p(x,y,u) ∨ ~p(y,z,v) ∨ ~p(x,v,w) ∨ p(u,z,w)] ∧ [~p(x,y,u) ∨ ~p(y,z,v) ∨ ~p(u,z,w) ∨ p(x,v,w)]
+
+C)
+∃x [(∀y p(x,y,y)) ∧ (∀y∃z p(z,y,x)) ]
+
+krok 3:
+∃x [(∀y p(x,y,y)) ∧ (∀l∃z p(z,l,x)) ]
+
+krok 4:
+w 1 części obejmujące Ex nie jest zależne od zmiennej y (nie są jakby w tej samej parze)
+więc za x podstawiamy jakieś konkretne x, np. a
+w 2 części obejmujące Ex nie jest zależne od zmiennej l (nie są obok siebie) więc za x podstawiamy też jakieś konkretne x, np. a. Ez natomiast jest obok ∀l więc z jest zależne od zmiennej l.
+
+∀y p(a,y,y)) ∧ ∀l p(f(l),l,a)
