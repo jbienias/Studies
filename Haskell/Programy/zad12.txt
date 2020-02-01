@@ -1,0 +1,9 @@
+Proszę zdefiniować funkcję foldr analogicznie do funkcji foldl. Jaki ma typ funkcja foldr? 
+
+foldr_ :: (t1 -> t2 -> t2) -> t2 -> [t1] -> t2
+foldr_ f e [] = e
+foldr_ f e (x:xs) = f x (foldr_ f e xs)
+
+foldl_ :: (t1 -> t2 -> t1) -> t1 -> [t2] -> t1
+foldl_ f e [] = e
+foldl_ f e (x:xs) = foldl_ f (f e x) xs

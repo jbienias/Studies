@@ -1,0 +1,63 @@
+Proszę napisać funkcję dz, która realizuje schemat do rozwiązania problemów typu "dziel i zwyciężaj" (divide and conquer) na abstrakcyjnym pożomie. dz ma używać następujące argumenty:
+
+    test, który sprawdza czy przypadek jest triwialny
+    koniec, który rozwiązuje triwialny przypadek
+    dziel, który dzieli problem do podproblemo
+    połącz, który połączy rozwiązania podproblemów 
+
+
+Używając funkcję dz proszę zrealizować funkcję mergesort oraz mnożenie liczb według Karatsuby.
+
+--templatka do dziel i zwyciezaj
+dz test end divide combine p = 
+  if (test p) then (end p)
+  else combine (map (dz test end divide combine) (divide p))
+
+--MergeSort
+testM l = (length l <=1)
+
+endM l = l
+
+splitM l = [take half l, drop half l]
+           where half = length l `div` 2
+
+combineM [[], ys] = ys
+combineM [xs, []] = xs
+combineM [(x:xs),(y:ys)] = 
+  if x < y then 
+    x:(combineM [xs, (y:ys)])
+  else 
+    y:(combineM [(x:xs), ys])
+	
+-- lub
+-- combineM [(x:xs),(y:ys)]
+--	|x < y = x:(combineM [xs, (y:ys)])
+--	|otherwise = y:(combineM [(x:xs), ys])
+
+mergesort :: (Ord a) => [a] -> [a]
+mergesort = dz testM endM splitM combineM
+
+--Karatsuba
+lengthNumb x = length . show $ x
+testK [] = True
+testK [x,x1] = (lengthNumb x) < 4 || (lengthNumb x1) < 4
+
+endK [] = []
+endK [x,y] = [x * y]
+endK [x,y,z] = [x * y, z]
+
+divideK [] = []
+divideK [x,x1,x2] = 
+  let y1 = x `div` 10^x2
+      y2 = x `mod` 10^x2
+      y3 = x2 `div` 2
+      z1 = x1 `div` 10^x2
+      z2 = x1 `mod` 10^x2
+      in [[y1,y2,y3],[z1,z2,y3],[y1+y2, z1+z2, y3]]
+
+combineK [[x, x1],[y,y1],[z,z1]] = [x * 10^(2*x1) + y + (z - x - y) * 10^x1,2*x1]
+
+karatsuba = dz testK endK divideK combineK
+
+main = do
+  print(mergesort [2,2,4,5,1])

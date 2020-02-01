@@ -1,0 +1,34 @@
+Proszę zdefiniować funkcję insertionsort :: (a -> a -> Bool) -> [a] -> [a] używając odpowiednego kombinatora. 
+
+--insertion sort pred
+append [] l = l
+append (x:xs) l = x:(append xs l)
+
+filter_ p = foldr (\x l -> if p x then x:l else l) []
+filterneg_ p = foldr (\x l -> if p x then l else x:l) []
+
+insert_ pred elem list = 
+  append (filter_ (pred elem) list) (elem:(filterneg_ (pred elem) list))
+
+insertionsort pred (x:xs) = foldr (insert_ pred) [] (x:xs)
+
+--normalny insertion sort https://riptutorial.com/haskell/example/7551/insertion-sort
+insert :: Ord a => a -> [a] -> [a]
+insert x [] = [x]
+insert x (y:ys) = 
+  if x < y then 
+    x:y:ys
+  else
+    y:(insert x ys)
+	
+-- lub
+-- insert x (y:ys)
+--	|x < y = x:y:ys
+-- 	|otherwise = y:(insert x ys)
+
+isort :: Ord a => [a] -> [a]
+isort [] = []
+isort (x:xs) = insert x (isort xs)
+
+main = do
+  print(isort[24,5623,1])

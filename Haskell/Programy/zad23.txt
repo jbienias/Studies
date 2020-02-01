@@ -1,0 +1,35 @@
+Niech będzie dany następujący typ dla drzew ogólnych.
+
+ data Tree a = Node a [Tree a]
+
+Proszę napisać następujące funkcje
+  a) sizeTree, która obliczy ilość węzłów w drzewie.
+  b) sumTree, która obliczy sumę elementów w drzewie.
+  c) preTree, której wartością jest lista elementów drzewa w porząku prefiksowym.
+
+Proszę także zrealizować funkcje te używać nadające się funkcje mapTree i foldTree.
+
+data Tree a = Node a [Tree a] deriving Show
+
+sizeTree (Node a []) = 1
+sizeTree (Node a t) = 1 + (foldr (\x y -> y + sizeTree(x)) 0 t)
+
+sumTree (Node a []) = a
+sumTree (Node a t) = a + (foldr (\x y -> y + sumTree(x)) 0 t)
+
+preTree (Node a []) = [a]
+preTree (Node a t) = [a] ++ (foldr (\x y -> preTree(x) ++ y) [] t)
+
+--te same funkcje tylko ze z fold/map dla Tree
+
+--mapTree f (Node a []) = Node (f a) []
+mapTree f (Node a t)  = Node (f a) (map (mapTree f) t)
+
+foldrTree f g (Node a t) = foldr f (g a) (map (foldrTree f g) t) 
+foldlTree f g (Node a t) = foldl f (g a) (map (foldlTree f g) t)
+
+sizeTreeFold = foldrTree (\x y->x+y) (\x->1)
+
+sumTreeFold = foldrTree (+) (\x->x)
+
+preTreeFold = foldlTree (++) (\x->[x])

@@ -1,0 +1,17 @@
+Proszę napisać funkcję same_values p1 p2 x y, której wartość jest True, jeżeli p1(x,y) i p2(x,y) mają tą samą wartość i False w przecziwnym przypadku.
+
+Przykłady:  > same_values plus times 2 3
+            False
+            > same_values plus times 2 2
+            True
+            > same_values equal not_equal 2 4
+            False
+			
+plus x y = x + y
+times x y = x * y
+
+same_values f1 f2 x y = f1 x y == f2 x y
+
+main = do
+  print(same_values plus times 2 2)
+  print(same_values plus times 2 3)

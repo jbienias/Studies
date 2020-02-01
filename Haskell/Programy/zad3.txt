@@ -1,0 +1,27 @@
+Proszę napisać funkcje boolowskie smaller x y, greater x y, equal x y, smaller_equal x y, greater_equal x y oraz not_equal x y.
+Należy z wbudowanych funkcji używać wyłącznie funckcję < oraz operacje boolowskie. 
+
+smaller :: Integer -> Integer -> Bool
+smaller a b = a < b
+
+greater :: Integer -> Integer -> Bool
+greater a b = a > b
+
+equal :: Integer -> Integer -> Bool
+equal a b = a == b
+
+greater_equal a b = a >= b
+
+smaller_equal :: Integer -> Integer -> Bool
+smaller_equal a b = a <= b
+
+not_equal :: Integer -> Integer -> Bool
+not_equal a b = a /= b
+
+main = do
+  print(smaller 10 20)
+  print(greater 20 10)
+  print(equal 10 10)
+  print(not_equal 10 11)
+  print(smaller_equal 10 10)
+  print(greater_equal 11 10)

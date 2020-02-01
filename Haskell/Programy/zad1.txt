@@ -1,0 +1,31 @@
+Jakie są wartości następujących wyrażeń?
+
+> 10 
+=> 10
+
+> 5 + 3 + 4 
+=> 12
+
+> 9 - 1
+=> 8  
+
+> 6 / 2
+=> 3.0
+
+> 2 * 3 + 4 * 6
+=> 30 
+
+> let a = 3 in a + 1 
+=> 4
+
+> let a = 1 in let b = a + 1 in a + b + a * b 
+=> 5
+
+> a
+=> <interactive>:17:1: error: Variable not in scope: a
+
+> let square n = n * n in square 4 
+=> 16
+
+> let fac n = if n == 0 then 1 else n * fac (n-1) in fac 5 
+=> 120

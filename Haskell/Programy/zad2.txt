@@ -1,0 +1,14 @@
+Proszę napisać funkcje gcd n m oraz lcm n m (dla liczb naturalnych), których wartością jest największy spólny dzielnik oraz najmniejsza wspólna wielokrotność n i m. 
+
+gcd_ :: Integer -> Integer -> Integer
+gcd_ a 0 = a
+gcd_ a b = gcd_ b (a `mod` b)
+
+lcm_ :: Integer -> Integer -> Integer
+lcm_ a 0 = 0
+lcm_ 0 b = 0
+lcm_ a b = a * b `div` (gcd_ a b)
+
+main = do
+  print(gcd_ 10 5)
+  print(lcm_ 20 21)

@@ -1,0 +1,18 @@
+Proszę napisać funkcje odd n oraz even n, które sprawdzają, czy liczba naturalna n jest nieparzysta względnie parzysta.
+Należy używać wyłącznie funkcje True, False, 0, 1 oraz "-1".
+
+even_ :: Integer -> Bool
+even_ 0 = True
+even_ 1 = False
+even_ n = even_ (n `mod` 2)
+
+odd_ :: Integer -> Bool
+odd_ 0 = False
+odd_ 1 = True
+odd_ n = odd_ (n `mod` 2)
+
+main = do
+  print(odd_ 5)
+  print(odd_ 4)
+  print(even_ 5)
+  print(even_ 4)

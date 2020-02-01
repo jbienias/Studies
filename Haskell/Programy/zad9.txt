@@ -1,0 +1,73 @@
+Proszę napisać następujące funkcje dla list:
+
+a) append l m, która konkatenuje listy l i m.
+
+b) member x , która sprawdza, czy x jest elementem listy l
+
+c) reverse l, która przewraca listę l.
+
+d) last l, która znajduje ostatni element w liscie l.
+
+e) delete x l, która skasuje element x z listy l.
+
+f) split x l, która podzieli listę l do dwóch list l1 i l2. l1 zawiera elementy mniejsze niż x a l2 elementy większe niż x.
+
+g) map f l , która zastosuje jednoargumentową funkcję f do wszystkich elementów listy l. 
+
+append_ :: [a] -> [a] -> [a]
+append_ [] l = l
+append_ (x:xs) l = x:append_ xs l
+
+member_ :: Eq t => t -> [t] -> Bool
+member_ x [] = False
+member_ x (y:ys) = (x == y) || (member_ x ys)
+
+reverse_ :: [t] -> [t]
+reverse_ [] = []
+reverse_ (x:xs) = append_ (reverse_ xs) [x]
+
+last_ :: [a] -> a
+last_ (x:[]) = x
+last_ (x:xs) = last_ xs
+
+delete_ :: Eq t => t -> [t] -> [t]
+delete_ x [] = []
+delete_ x (y:ys) = 
+  if x==y then 
+    ys
+  else 
+    (append_ [y] (delete_ x ys))
+
+-- lub
+-- delete_ x (y:ys)
+--	|x==y = ys
+-- 	|otherwise = (append_ [y] (delete_ x ys))
+
+split_ :: Ord a => a -> [a] -> ([a], [a])
+split_ x [] = ([],[])
+split_ x (y:ys) = 
+  if x < y then 
+    let (l1,l2) = split_ x ys in (l1,y:l2)
+  else if x > y then 
+    let (l1,l2) = split_ x ys in (y:l1,l2)
+  else 
+    let (l1,l2) = split_ x ys in (l1,l2)
+
+-- lub
+-- split_ x (y:ys)
+--	|x < y = let (l1,l2) = split_ x ys in (l1,y:l2)
+--	|x > y = let (l1,l2) = split_ x ys in (y:l1,l2)
+-- 	|otherwise =  let (l1,l2) = split_ x ys in (l1,l2)
+
+map_ :: (t1 -> t) -> [t1] -> [t]
+map_ f [] = []
+map_ f (x:xs) = (f x):(map_ f xs)
+
+main = do
+  print(append_ [1,2] [3,4])
+  print(member_ 1 [1,2,3,4])
+  print(reverse_ [1,2,3,4])
+  print(last_ [1,2,3,4])
+  print(delete_ 1 [1,2,3,4])
+  print(split_ 3 [1,2,3,4])
+  print(map_ (^2) [1,2,3,4])

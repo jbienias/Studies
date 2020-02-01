@@ -1,0 +1,29 @@
+Proszę napisać funkcję pozycja, która znajduje pozycję elementu x w liście l. Należy używać typ Maybe a.
+Proszę napisać funkcję drop, która eliminuje pierwsze n elementy z listy l. Należy używać typ Maybe a.
+Proszę napisać funkcję sum, która sumuje elementy listy typu [Maybe Int]. 
+
+--data Maybe a = Nothing | Just a 
+--wbudowany juz w GHCi
+
+poz [] x n = Nothing
+poz (x:xs) y n
+  |x==y = (Just(n+1))
+  |otherwise = poz xs y (n+1)
+
+pozycja l x = poz l x 0
+
+drop_ [] n = Nothing
+drop_ l 0 = Just l
+drop_ (x:xs) n = drop_ xs (n-1)
+
+sum_ [] n = n
+sum_ ((Just x):xs) n = sum_ xs (x+n)
+sum_ (Nothing:xs) n = sum_ xs n
+
+suma l = sum_ l 0
+
+main = do
+  print(pozycja [] 1)
+  print(pozycja [1,2,3] 3)
+  print(suma [Just 10, Just 2, Nothing, Nothing, Just 3])
+  print(drop_ [1,2,3] 2)

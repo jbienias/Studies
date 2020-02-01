@@ -1,0 +1,62 @@
+Jaki typ mają następują wyrażenia?
+
+a)   +
+(+) :: Num a => a -> a -> a
+
+b)   + 37
+(+ 37) :: Num a => a -> a
+
+c)   append
+append :: [a] -> [a] -> [a]
+
+d)   append [1,2]
+append [1,2] :: Num a => [a] -> [a]
+
+e)   map
+map :: (t -> a) -> [t] -> [a]
+
+f)   map square [1,2,3,4,5]
+map square [1,2,3,4,5] :: Num a => [a]
+
+g)   map square [['a']]
+map square ::  No instance for (Num [Char]) arising from a use of ‘square’
+
+h)   map length [['a']]
+map length [['a']] :: [Int]
+
+i)   foldl
+foldl :: Foldable t => (b -> a -> b) -> b -> t a -> b
+
+j)   foldl (++)
+foldl (++) :: Foldable t => [a] -> t [a] -> [a]
+
+k)   foldl (++) []
+foldl (++) [] :: Foldable t => t [a] -> [a]
+
+l)   f 7
+f :: Num a => a -> alpha
+(f 7) :: aplha
+
+m)   \f -> f 7
+(\f -> f 7) :: Num t => (t -> t1) -> t1
+
+n)   + (f x) (g x)
+f :: Num a => alpha -> a
+g :: Num a => alpha -> a
+x :: alpha
+(+ (f x) (g x)) :: Num a => a
+
+o)   f 7 (g 'x')
+g :: Char a => alpha
+f :: Num t => t -> (alpha -> beta)
+(f 7 (g 'x')) :: beta
+
+p)   \f -> f (g x)
+g :: alpha -> beta
+x :: alpha
+(\f -> f (g x)) :: (beta -> gamma) -> gamma
+
+q)   (\f -> f (g x)) square
+g :: Num a => alpha -> a
+x :: alpha
+(\f -> f (g x)) square :: Num a => a

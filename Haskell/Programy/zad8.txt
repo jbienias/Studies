@@ -1,0 +1,42 @@
+Potęgowanie b^e (dla liczb naturalnych b i e) można szybko wykonać używając b^e = (b^(e/2))^2. Proszę napisać rekurencyjną oraz iteracyjną funkcję exp b e na podstawie tej właściwości.
+
+expR:: Integer -> Integer -> Integer
+expR b e =
+  if e == 0 then 
+    1
+  else if (mod e 2) /= 0 then
+    b * expR b (e-1)
+  else
+    (expR b (div e 2))^2
+
+expI:: Integer -> Integer -> Integer
+expI b e = 
+  expAcc b e 1 b
+
+expAcc:: Integer -> Integer -> Integer -> Integer -> Integer
+expAcc b e e_ b_ = 
+  if e_ == e then 
+    b_
+  else if (2*e_) <= e then 
+    expAcc b e (2*e_) (b_^2)
+  else 
+    expAcc b e (e_+1) (b_*b)
+
+-- lub zamiast if elsów
+expR2 b e
+  |e==0 = 1
+  |(mod e 2) /= 0 = b * expR2 b (e-1)
+  |otherwise = (expR2 b (div e 2))^2
+
+expI2 b e = expAcc2 b e 1 b
+
+expAcc2 b e e_ b_
+  |e_ == e = b_
+  |(2*e_) <= e = expAcc2 b e (2*e_) (b_^2)
+  |otherwise = expAcc2 b e (e_+1) (b_*b)
+
+main = do
+  print(expR 2 10)
+  print(expI 2 10)
+  print(expR2 2 10)
+  print(expI2 2 10)

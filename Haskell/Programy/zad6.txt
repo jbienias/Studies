@@ -1,0 +1,27 @@
+Proszę napisać funkcję kwad a b c, która obliczy miejsca zerowe równania kwadratowego ax^2 + bx + c dla danych a, b i c.
+
+kwad a b c = 
+  let delta = sqrt(b^2 - 4*a*c) in
+    if delta == 0 then 
+      [(-b / 2*a)]
+    else if delta > 0 then
+      [(-b - delta)/(2*a), (-b + delta)/(2*a)]
+    else
+      []
+	  
+-- lub zamiast if/elsów
+
+kwad2 a b c
+  |delta == 0 = [(-b / 2*a)]
+  |delta > 0 = [(-b - delta)/(2*a), (-b + delta)/(2*a)]
+  |otherwise = []
+  where delta = sqrt(b^2 - 4*a*c)
+
+main = do
+  print(kwad 2 (-4) 2)
+  print(kwad (-1) 3 4)
+  print(kwad (-5) 6 (-2))
+  
+  print(kwad2 2 (-4) 2)
+  print(kwad2 (-1) 3 4)
+  print(kwad2 (-5) 6 (-2))

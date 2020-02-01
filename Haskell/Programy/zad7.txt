@@ -1,0 +1,30 @@
+Proszę napisać funkcję fib n, która obliczy n-tego elementu ciągu Fibonacci'ego.
+Proszę podać dwie wersje tej funkcji: jedną rekurencyjną a jedną iteracyjną, tzn. używając akumulator.
+
+--fib rekurencyjny
+fibR:: Integer -> Integer
+fibR 0 = 0 --fib0 = 0
+fibR 1 = 1 --fib1 = 1
+fibR 2 = 1 --fib2 = 1
+fibR n = fibR(n-2) + fibR(n-1)
+
+--fib iteracyjny
+fibI:: Integer -> Integer
+fibI n = fibAcc 0 1 0 n
+
+fibAcc:: Integer -> Integer -> Integer -> Integer -> Integer
+fibAcc a b i m =
+  if i == m then 
+    a
+  else
+    fibAcc b (a+b) (i+1) m
+
+-- lub zamiast if/elsów
+
+fibAcc2 a b i m
+	|i == m = a
+	|otherwise = fibAcc2 b (a+b) (i+1) m
+
+main = do
+  print(fibR 12)
+  print(fibI 12)

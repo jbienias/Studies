@@ -1,0 +1,42 @@
+Używając funkcje foldl i foldr proszę zdefiniować funkcje
+a) prod
+b) length
+c) and (dla list wartości boole'owskich)
+d) nwd (dla list liczb naturalnych)
+e) delete
+f) map
+g) reverse
+h) filter pred
+i) forall pred. 
+
+prod_ = foldr (*) 1
+
+length_r = foldr (\_ x -> x + 1) 0
+length_l = foldl (\x _ -> x + 1) 0
+
+and_ = foldr (&&) True
+
+gcd_ = foldr gcd 0
+
+delete_ y = foldr (\x l -> if x == y then l else x:l) []
+
+map_ f = foldr (\x l -> (f x):l) []
+
+reverse_ = foldl (\l x -> x:l) []
+
+filter_ p = foldr (\x l -> if p x then x:l else l) []
+
+forall_ p = foldr (\x l -> (&&) (p x) l) True
+
+
+main = do 
+  print(prod_ [1,2,3])
+  print(length_r [1,2])
+  print(length_l [1,2])
+  print(and_ [True, True, True])
+  print(gcd_ [12, 12, 18])
+  print(delete_ 1 [1,2,3,1])
+  print(map_ (\x -> x*x) [1,2,3])
+  print(reverse_ [1,2,3])
+  print(filter_ odd [1,2,3])
+  print(forall_ odd [1,7,3])

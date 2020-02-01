@@ -1,0 +1,37 @@
+a) Proszę zdefiniować funkcję map2 f l1 l2, która zastosuje dwuargumentową funkcję f do wszystkich elementów list l1 i l2.
+
+Przykład: > map2 (+) [1,2,3] [8,9,10]
+        [9,11,13] 
+
+b) Proszę zdefiniować funkcję pairing l1 l2, która zmienia dwuch list l1 i l2 do listy par.
+
+Przykład: > pairing [1,2,3] [a,b,c]
+        [(1,a),(2,b),(3,c)] 
+
+c) Proszę napisać funkcję filter p l, której wartością jest lista wszystkich elementów listy l, które spełnią jednoargumentowy predykat p. 
+
+map2 :: (t2 -> t1 -> t) -> [t2] -> [t1] -> [t]
+map2 f [] [] = []
+map2 f (x:xs) (y:ys) = (f x y):(map2 f xs ys)
+
+pairing :: [t1] -> [t] -> [(t1, t)]
+pairing [] [] = []
+pairing (x:xs) (y:ys) = (x,y):(pairing xs ys)
+
+filter_ :: (a -> Bool) -> [a] -> [a]
+filter_ p [] = []
+filter_ p (x:xs) = 
+  if p x then
+    let l = filter_ p xs in (x:l)
+  else
+    let l = filter_ p xs in l
+
+-- lub
+-- filter_ p (x:xs)
+--	|p x = let l = filter_ p xs in (x:l)
+--	|otherwise = let l = filter_ p xs in l
+
+main = do
+  print(map2 (+) [1,2,3] [8,9,10])
+  print(pairing [1,2,3] ['a', 'b', 'c'])
+  print(filter_ odd [1,2,3,4,5])

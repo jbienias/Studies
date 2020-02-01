@@ -1,0 +1,44 @@
+Proszę napisać typ Set z funkcjami member, subset, union, intersection oraz delete. 
+
+data Set a = EmptySet | Into a (Set a)
+
+elem_ _ _ EmptySet = EmptySet
+
+elem_ 1 x (Into y s)
+  |x==y = elem_ 1 x s
+  |otherwise = Into y (elem_ 1 x s)
+
+elem_ 0 x (Into y s)
+  |x==y = Into y (elem_ 1 x s) 
+  |otherwise = Into y (elem_ 0 x s)
+
+setToList EmptySet = []
+setToList (Into x s) = [x]++(setToList s)
+
+duplic s [] = s
+duplic s (x:xs) = duplic (elem_ 0 x s) xs
+
+uniq s = duplic s (setToList s)
+
+setsum EmptySet s = s
+setsum (Into x s) l = setsum s (Into x l)
+
+union s l = uniq (setsum s l)
+
+member x EmptySet = False
+member x (Into y s) = x==y || member x s
+
+subset EmptySet s = True
+subset (Into x s1) s2 = member x s2 && subset s1 s2
+
+intersection EmptySet s = EmptySet
+intersection (Into x s1) s2
+  |(member x s2) = (Into x (intersection s1 s2)) 
+  |otherwise = (intersection s1 s2)
+
+del x EmptySet = EmptySet
+del x (Into y s) = 
+  |x==y = s
+  |otherwise = (Into y (del x s)) 
+
+delete x s = del x (uniq s)
