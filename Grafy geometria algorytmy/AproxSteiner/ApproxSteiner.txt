@@ -1,0 +1,50 @@
+Notatki (proj 5)
+Zlozonosc (skad sie bierze? jak poprawic?)
+- efektywnie wyznaczac kolejny najdalszy punkt (jezei zachlannie bedziemy liczyc dla kazdego odleglosc - dostaniemy zlozonosc n2) - spojrzec z odrobina czulosci i zobaczyc ze byc moze nie musze za kazdym razem musze obliczac odleglosc od wszystkich, dochodzi tylko jeden szpital - zmiany są lokalne - n*k zlozonosc
+
+- steinera:
+punkt scalajacy moze sie pokryc z jednym z punktów
+wyznaczenie wszystkich mozliwych punktow scalajacych i sposrod nich nalezy wybrac ten punkt scalajacy ktory jest najdalej
+
+--------------------------------------------------------------------------------
+//4 punktów
+Zachlannie (n^3 log n)
+P - zbior punktow
+C - zbior kandydatow
+wyznacz kandydatow (n^2)
+posortuj kandydatow (n2 * logn^2) = (n2 log n) - Manhatan xD?
+wybierz najwczesniejszego(pierwszego) (1)
+usun jego twórców z P i dodaj go do P (n^2)
+
+- wszystko wykonujemy n razy, więc O(n3logn)
+
+Uwaga:
+dodajemy odpowiednie krawedzie p <p,g> i q <p,q> ( <p,q> - punkt scalajacy)
+gdzie p i q to para, <p,q> kandydat
+
+Czas : n^3 log n
+
+--------------------------------------------------------------------------------
+//4.5 punktów
+Poprawione (n^3):
+- wyznacz kandydatow (n^2)
+- wyznacz element najmniejszy (najdalszy) (n)
+- wybierz najwczesniejszego(pierwszego) (1)
+- usun jego twórców z P i dodaj go do P (n^2)
+
+- wszystko wykonujemy n razy więc O(n^3)
+
+Czas : n^3 xDDDD
+--------------------------------------------------------------------------------
+//5 punktow
+Jeszcze barzdiej poprawione (n^2 log n)
+Kolejna optymalizacja xD (ta za 5 punktów) (lepszy zbiór kandydatów, lepszy znaczy mniejszy)
+- wyznacz punkty maksymalne (cos jak z otoczką wypukłą) (n log n), i dodaj jako kandydatów (n)
+- posortuj kandydatów O(n) - poprzednie wyznaczenie (ale jakbysmy posortowali nlog n nic sie nie zmieni)
+- wybierz najwczesnijeszego (<p,q>) (1)
+- usun tworców z P i dodaj go do P O(n)
+
+- wszystko wykonujemy n razy
+
+Czas: n^2 log n
+--------------------------------------------------------------------------------
